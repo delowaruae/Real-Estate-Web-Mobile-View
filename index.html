@@ -1,0 +1,1105 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Responsive Header & Search </title>
+    <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+   <!-- main head start -->
+ <div class="header">
+        <div class="menu-toggle" id="menuToggle"><i class="fa fa-bars"></i> </div>
+        <div class="logo">
+          <a href="#"><img src="logo.png" alt="Logo"></a>
+        </div>
+		
+		<div class="menu-items" >
+        <div class="menu" id="menu">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Properties</a></li>
+            <li><a href="#">Agents</a></li>
+            <li><a href="#">Agencies</a></li>
+            <li><a href="#">EN ▼</a></li>
+            <li><a href="#">USD ▼</a></li>
+            <li class="country-dropdown">
+              <a href="#">UAE 🚩</a>
+              <ul>
+                <li><a href="#">Saudi Arabia</a></li>
+                <li><a href="#">Qatar</a></li>
+                <li><a href="#"> Bahrain</a></li>
+              </ul>
+            </li>
+            <li><a href="#">👤</a></li>
+            <li><a href="#"><i class="fa fa-bell"></i></a></li>
+          </ul>
+        </div>
+        <div class="right-icons">
+          <a href="#">EN ▼</a>
+          <a href="#">👤</a>
+        </div>
+		</div>
+    </div>
+	
+	
+ <div class="home-div">
+    <!-- Search Section -->
+    <div class="search-bar">
+      <div class="voice-search">
+        <input type="text" placeholder="Search you need...">
+        <button class="btn-camera" onclick="document.getElementById('cameraInput').click()"><i class="fa fa-camera"></i></button>
+        <input type="file" id="cameraInput" accept="image/*" capture="environment" style="display:none">
+        <button class="btn-mic"><i class="fa fa-microphone"></i></button>
+        <button class="btn-search"><i class="fa fa-search"></i></button>
+      </div>
+
+      <div class="search-tab">
+        <div class="status-buttons">
+          <button>ALL STATUS</button>
+          <button>FOR RENT</button>
+          <button>FOR SALE</button>
+        </div>
+
+        <div class="filters">
+          <select>
+            <option>Property Type</option>
+            <option>Apartment</option>
+            <option>Villa</option>
+          </select>
+          <select>
+            <option>All Cities</option>
+            <option>Dubai</option>
+            <option>Abu Dhabi</option>
+          </select>
+          <select>
+            <option>Bedrooms</option>
+            <option>1</option>
+            <option>2</option>
+          </select>
+          <select>
+            <option>Max. Price</option>
+            <option>$1000</option>
+            <option>$2000</option>
+          </select>
+          <button class="search-btn">Search</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- ===== Marquee Section ===== -->
+<div class="marquee-wrap">
+  <!-- Arrows -->
+  <button class="arrow arrow-left"><i class="fa-solid fa-chevron-left"></i></button>
+  <button class="arrow arrow-right"><i class="fa-solid fa-chevron-right"></i></button>
+
+  <div class="marquee" id="marquee">
+    <ul class="group">
+      <li><img src="pic1.png" alt=""><span class="tag">SALE</span></li>
+      <li><img src="pic2.png" alt=""><span class="tag">RENT</span></li>
+      <li><img src="pic3.png" alt=""><span class="tag">RENT</span></li>
+      <li><img src="pic4.png" alt=""><span class="tag">SALES</span></li>
+      <li><img src="pic5.png" alt=""><span class="tag">RENT</span></li>
+      <li><img src="pic6.png" alt=""><span class="tag">SALE</span></li>
+      <li><img src="pic7.png" alt=""><span class="tag">RENT</span></li>
+      <li><img src="pic8.png" alt=""><span class="tag">RENT</span></li>
+      <li><img src="pic9.png" alt=""><span class="tag">SALES</span></li>
+      <li><img src="pic10.png" alt=""><span class="tag">SALES</span></li>
+
+      <!-- duplicate all for seamless scroll -->
+      <li><img src="pic1.png" alt=""><span class="tag">SALE</span></li>
+      <li><img src="pic2.png" alt=""><span class="tag">RENT</span></li>
+      <li><img src="pic3.png" alt=""><span class="tag">RENT</span></li>
+      <li><img src="pic4.png" alt=""><span class="tag">SALES</span></li>
+      <li><img src="pic5.png" alt=""><span class="tag">RENT</span></li>
+      <li><img src="pic6.png" alt=""><span class="tag">SALE</span></li>
+      <li><img src="pic7.png" alt=""><span class="tag">RENT</span></li>
+      <li><img src="pic8.png" alt=""><span class="tag">RENT</span></li>
+      <li><img src="pic9.png" alt=""><span class="tag">SALES</span></li>
+      <li><img src="pic10.png" alt=""><span class="tag">SALES</span></li>
+    </ul>
+  </div>
+</div>
+
+
+
+<!-- All City Section start-->
+  <div class="allcity-container">
+    <!-- Arrows -->
+    <button class="arrow arrow-left"><i class="fa-solid fa-chevron-left"></i></button>
+    <button class="arrow arrow-right"><i class="fa-solid fa-chevron-right"></i></button>
+
+    <div class="allcity" id="citySlider">
+
+      <div class="card">
+        <img src="city1.png" alt="Dubai">
+        <div class="card-content">
+          <div class="properties">12 Properties</div>
+          <div class="city">Dubai</div>
+        </div>
+        <a href="dubai.html" class="more-details">MORE DETAILS</a>
+      </div>
+
+      <div class="card">
+        <img src="city2.png" alt="Sharjah">
+        <div class="card-content">
+          <div class="properties">4 Properties</div>
+          <div class="city">Sharjah</div>
+        </div>
+        <a href="sharjah.html" class="more-details">MORE DETAILS</a>
+      </div>
+
+      <div class="card">
+        <img src="city3.png" alt="Abu Dhabi">
+        <div class="card-content">
+          <div class="properties">7 Properties</div>
+          <div class="city">Abu Dhabi</div>
+        </div>
+        <a href="abudhabi.html" class="more-details">MORE DETAILS</a>
+      </div>
+
+      <div class="card">
+        <img src="city4.png" alt="Ajman">
+        <div class="card-content">
+          <div class="properties">5 Properties</div>
+          <div class="city">Ajman</div>
+        </div>
+        <a href="ajman.html" class="more-details">MORE DETAILS</a>
+      </div>
+
+    </div>
+  </div>
+<!-- All City Section end -->
+
+
+<!-- 4 Property Gallery Section -->
+  <div class="gallery">
+    <h1>Latest Properties in Dubai</h1>
+    <p>Find your next home from our curated property listings.</p>
+
+       <div class="property-grid">
+      <!-- Property Cards -->
+      <div class="property-card">
+        <div class="property-image">
+          <img src="images/pic1.png" alt="Property 1">
+        </div>
+        <div class="property-info">
+          <h3 class="property-title">Burj Views Residence</h3>
+          <div class="property-price">AED 2,450,000</div>
+          <div class="property-address"><i class="fas fa-map-marker-alt"></i> Downtown Dubai</div>
+          <div class="property-details">
+            <div class="detail"><i class="fas fa-bed"></i><span>3 Beds</span></div>
+            <div class="detail"><i class="fas fa-bath"></i><span>2 Baths</span></div>
+            <div class="detail"><i class="fas fa-ruler-combined"></i><span>1,850 sq.ft</span></div>
+          </div>
+          <a href="#" class="view-btn">View Details</a>
+        </div>
+      </div>
+
+      <div class="property-card">
+        <div class="property-image">
+          <img src="images/pic2.png" alt="Property 2">
+        </div>
+        <div class="property-info">
+          <h3 class="property-title">Sea View Luxury Villa</h3>
+          <div class="property-price">AED 350,000/yr</div>
+          <div class="property-address"><i class="fas fa-map-marker-alt"></i> Dubai Marina</div>
+          <div class="property-details">
+            <div class="detail"><i class="fas fa-bed"></i><span>4 Beds</span></div>
+            <div class="detail"><i class="fas fa-bath"></i><span>3 Baths</span></div>
+            <div class="detail"><i class="fas fa-ruler-combined"></i><span>3,200 sq.ft</span></div>
+          </div>
+          <a href="#" class="view-btn">View Details</a>
+        </div>
+      </div>
+
+      <div class="property-card">
+        <div class="property-image">
+          <img src="images/pic3.png" alt="Property 3">
+        </div>
+        <div class="property-info">
+          <h3 class="property-title">Dream Luxury Penthouse</h3>
+          <div class="property-price">AED 8,900,000</div>
+          <div class="property-address"><i class="fas fa-map-marker-alt"></i> Palm Jumeirah</div>
+          <div class="property-details">
+            <div class="detail"><i class="fas fa-bed"></i><span>5 Beds</span></div>
+            <div class="detail"><i class="fas fa-bath"></i><span>4 Baths</span></div>
+            <div class="detail"><i class="fas fa-ruler-combined"></i><span>4,500 sq.ft</span></div>
+          </div>
+          <a href="#" class="view-btn">View Details</a>
+        </div>
+      </div>
+	  
+	  
+	  <div class="property-card">
+        <div class="property-image">
+          <img src="images/pic4.png" alt="Property 1">
+        </div>
+        <div class="property-info">
+          <h3 class="property-title">Burj Views Residence</h3>
+          <div class="property-price">AED 2,450,000</div>
+          <div class="property-address"><i class="fas fa-map-marker-alt"></i> Downtown Dubai</div>
+          <div class="property-details">
+            <div class="detail"><i class="fas fa-bed"></i><span>3 Beds</span></div>
+            <div class="detail"><i class="fas fa-bath"></i><span>2 Baths</span></div>
+            <div class="detail"><i class="fas fa-ruler-combined"></i><span>1,850 sq.ft</span></div>
+          </div>
+          <a href="#" class="view-btn">View Details</a>
+        </div>
+      </div>
+
+      <div class="property-card">
+        <div class="property-image">
+          <img src="images/pic5.png" alt="Property 2">
+        </div>
+        <div class="property-info">
+          <h3 class="property-title">Sea View Luxury Villa</h3>
+          <div class="property-price">AED 350,000/yr</div>
+          <div class="property-address"><i class="fas fa-map-marker-alt"></i> Dubai Marina</div>
+          <div class="property-details">
+            <div class="detail"><i class="fas fa-bed"></i><span>4 Beds</span></div>
+            <div class="detail"><i class="fas fa-bath"></i><span>3 Baths</span></div>
+            <div class="detail"><i class="fas fa-ruler-combined"></i><span>3,200 sq.ft</span></div>
+          </div>
+          <a href="#" class="view-btn">View Details</a>
+        </div>
+      </div>
+
+      <div class="property-card">
+        <div class="property-image">
+          <img src="images/pic6.png" alt="Property 3">
+        </div>
+        <div class="property-info">
+          <h3 class="property-title">Dream Luxury Penthouse</h3>
+          <div class="property-price">AED 8,900,000</div>
+          <div class="property-address"><i class="fas fa-map-marker-alt"></i> Palm Jumeirah</div>
+          <div class="property-details">
+            <div class="detail"><i class="fas fa-bed"></i><span>5 Beds</span></div>
+            <div class="detail"><i class="fas fa-bath"></i><span>4 Baths</span></div>
+            <div class="detail"><i class="fas fa-ruler-combined"></i><span>4,500 sq.ft</span></div>
+          </div>
+          <a href="#" class="view-btn">View Details</a>
+        </div>
+      </div>
+	  
+	  
+	  <div class="property-card">
+        <div class="property-image">
+          <img src="images/pic7.png" alt="Property 1">
+        </div>
+        <div class="property-info">
+          <h3 class="property-title">Burj Views Residence</h3>
+          <div class="property-price">AED 2,450,000</div>
+          <div class="property-address"><i class="fas fa-map-marker-alt"></i> Downtown Dubai</div>
+          <div class="property-details">
+            <div class="detail"><i class="fas fa-bed"></i><span>3 Beds</span></div>
+            <div class="detail"><i class="fas fa-bath"></i><span>2 Baths</span></div>
+            <div class="detail"><i class="fas fa-ruler-combined"></i><span>1,850 sq.ft</span></div>
+          </div>
+          <a href="#" class="view-btn">View Details</a>
+        </div>
+      </div>
+
+      <div class="property-card">
+        <div class="property-image">
+          <img src="images/pic8.png" alt="Property 2">
+        </div>
+        <div class="property-info">
+          <h3 class="property-title">Sea View Luxury Villa</h3>
+          <div class="property-price">AED 350,000/yr</div>
+          <div class="property-address"><i class="fas fa-map-marker-alt"></i> Dubai Marina</div>
+          <div class="property-details">
+            <div class="detail"><i class="fas fa-bed"></i><span>4 Beds</span></div>
+            <div class="detail"><i class="fas fa-bath"></i><span>3 Baths</span></div>
+            <div class="detail"><i class="fas fa-ruler-combined"></i><span>3,200 sq.ft</span></div>
+          </div>
+          <a href="#" class="view-btn">View Details</a>
+        </div>
+      </div>
+
+      <div class="property-card">
+        <div class="property-image">
+          <img src="images/pic9.png" alt="Property 3">
+        </div>
+        <div class="property-info">
+          <h3 class="property-title">Dream Luxury Penthouse</h3>
+          <div class="property-price">AED 8,900,000</div>
+          <div class="property-address"><i class="fas fa-map-marker-alt"></i> Palm Jumeirah</div>
+          <div class="property-details">
+            <div class="detail"><i class="fas fa-bed"></i><span>5 Beds</span></div>
+            <div class="detail"><i class="fas fa-bath"></i><span>4 Baths</span></div>
+            <div class="detail"><i class="fas fa-ruler-combined"></i><span>4,500 sq.ft</span></div>
+          </div>
+          <a href="#" class="view-btn">View Details</a>
+        </div>
+      </div>
+	  
+	  <div class="property-card">
+        <div class="property-image">
+          <img src="images/pic10.png" alt="Property 1">
+        </div>
+        <div class="property-info">
+          <h3 class="property-title">Burj Views Residence</h3>
+          <div class="property-price">AED 2,450,000</div>
+          <div class="property-address"><i class="fas fa-map-marker-alt"></i> Downtown Dubai</div>
+          <div class="property-details">
+            <div class="detail"><i class="fas fa-bed"></i><span>3 Beds</span></div>
+            <div class="detail"><i class="fas fa-bath"></i><span>2 Baths</span></div>
+            <div class="detail"><i class="fas fa-ruler-combined"></i><span>1,850 sq.ft</span></div>
+          </div>
+          <a href="#" class="view-btn">View Details</a>
+        </div>
+      </div>
+
+      <div class="property-card">
+        <div class="property-image">
+          <img src="images/pic11.png" alt="Property 2">
+        </div>
+        <div class="property-info">
+          <h3 class="property-title">Sea View Luxury Villa</h3>
+          <div class="property-price">AED 350,000/yr</div>
+          <div class="property-address"><i class="fas fa-map-marker-alt"></i> Dubai Marina</div>
+          <div class="property-details">
+            <div class="detail"><i class="fas fa-bed"></i><span>4 Beds</span></div>
+            <div class="detail"><i class="fas fa-bath"></i><span>3 Baths</span></div>
+            <div class="detail"><i class="fas fa-ruler-combined"></i><span>3,200 sq.ft</span></div>
+          </div>
+          <a href="#" class="view-btn">View Details</a>
+        </div>
+      </div>
+
+      <div class="property-card">
+        <div class="property-image">
+          <img src="images/pic12.png" alt="Property 3">
+        </div>
+        <div class="property-info">
+          <h3 class="property-title">Dream Luxury Penthouse</h3>
+          <div class="property-price">AED 8,900,000</div>
+          <div class="property-address"><i class="fas fa-map-marker-alt"></i> Palm Jumeirah</div>
+          <div class="property-details">
+            <div class="detail"><i class="fas fa-bed"></i><span>5 Beds</span></div>
+            <div class="detail"><i class="fas fa-bath"></i><span>4 Baths</span></div>
+            <div class="detail"><i class="fas fa-ruler-combined"></i><span>4,500 sq.ft</span></div>
+          </div>
+          <a href="#" class="view-btn">View Details</a>
+        </div>
+      </div>
+	 
+	  
+    </div> 
+    </div>
+
+
+
+<!-- 5 New Explore more zone   mobile res starts  -->
+
+<main class="container">
+    <div class="explore-con">
+      <h1>Explore More Zone</h1>
+
+      <div class="nav-tabs">
+        <button class="tab-btn active">Rent</button>
+        <button class="tab-btn">Buy</button>
+        <button class="tab-btn">Invest</button>
+        <button class="tab-btn">Explore</button>
+        <button class="tab-btn">News</button>
+      </div>
+
+      <div class="city-buttons">
+        <button class="city-btn active">Dubai</button>
+        <button class="city-btn">Abu Dhabi</button>
+        <button class="city-btn">Sharjah</button>
+        <button class="city-btn">Ajman</button>
+        <button class="city-btn">Ras Al Khaimah</button>
+      </div>
+
+      <div class="divider"></div>
+
+      <h1>Find Apartments in Dubai</h1>
+      <div class="apartments-grid">
+        <div class="apartment-card">
+          <div class="property-image">
+            <img src="h1.png" alt="Apartment 1">
+          </div>
+          <div class="apartment-info">
+            <h3 class="apartment-title">1 BHK Apartment in Downtown</h3>
+            <p class="apartment-location">Downtown Dubai</p>
+            <p class="apartment-price">AED 75,000/year</p>
+          </div>
+        </div>
+
+        <div class="apartment-card">
+          <div class="property-image">
+            <img src="h2.png" alt="Apartment 2">
+          </div>
+          <div class="apartment-info">
+            <h3 class="apartment-title">Studio Apartment in JVC</h3>
+            <p class="apartment-location">Jumeirah Village Circle</p>
+            <p class="apartment-price">AED 45,000/year</p>
+          </div>
+        </div>
+
+        <div class="apartment-card">
+          <div class="property-image">
+            <img src="h3.png" alt="Apartment 3">
+          </div>
+          <div class="apartment-info">
+            <h3 class="apartment-title">2 BHK in Business Bay</h3>
+            <p class="apartment-location">Business Bay</p>
+            <p class="apartment-price">AED 110,000/year</p>
+          </div>
+        </div>
+
+        <div class="apartment-card">
+          <div class="property-image">
+            <img src="h4.png" alt="Apartment 4">
+          </div>
+          <div class="apartment-info">
+            <h3 class="apartment-title">Luxury Apartment in Palm Jumeirah</h3>
+            <p class="apartment-location">Palm Jumeirah</p>
+            <p class="apartment-price">AED 220,000/year</p>
+          </div>
+        </div>
+
+        <div class="apartment-card">
+          <div class="property-image">
+            <img src="h5.png" alt="Apartment 5">
+          </div>
+          <div class="apartment-info">
+            <h3 class="apartment-title">Modern Flat in Marina</h3>
+            <p class="apartment-location">Dubai Marina</p>
+            <p class="apartment-price">AED 150,000/year</p>
+          </div>
+        </div>
+
+        <div class="apartment-card">
+          <div class="property-image">
+            <img src="h6.png" alt="Apartment 6">
+          </div>
+          <div class="apartment-info">
+            <h3 class="apartment-title">Family Apartment in Al Nahda</h3>
+            <p class="apartment-location">Al Nahda</p>
+            <p class="apartment-price">AED 55,000/year</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+<!-- 5 New Explore more zone   mobile res ends  -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 5 New Explore more zone starts -->
+	<main class="container">
+    <!-- Home Page -->
+    <div id="home-page" class="page active">
+      <!-- Explore more zone -->
+      <div class="explore-con">
+        <h1>Explore More Zone</h1>
+
+        <div class="nav-tabs">
+          <button class="tab-btn active" data-tab="rent">Rent</button>
+          <button class="tab-btn" data-tab="buy">Buy</button>
+          <button class="tab-btn" data-tab="invest">Invest</button>
+          <button class="tab-btn" data-tab="explore">Explore</button>
+          <button class="tab-btn" data-tab="news">News</button>
+        </div>
+
+        <div class="city-buttons">
+          <button class="city-btn active" data-city="dubai">Dubai</button>
+          <button class="city-btn" data-city="abudhabi">Abu Dhabi</button>
+          <button class="city-btn" data-city="sharjah">Sharjah</button>
+          <button class="city-btn" data-city="ajman">Ajman</button>
+          <button class="city-btn" data-city="rasalkhaimah">Ras Al Khaimah</button>
+          <button class="city-btn" data-city="alain">Al Ain</button>
+          <button class="city-btn" data-city="fujairah">Fujairah</button>
+          <button class="city-btn" data-city="ummquwain">Umm Al Quwain</button>
+        </div>
+
+        <div class="divider"> </div>
+
+        <!-- Dubai Content -->
+        <div class="city-content active" id="dubai">
+          <h1>Find Apartments in Dubai</h1>
+          <div class="apartments-grid">
+            <div class="apartment-card">
+              <div class="property-image">
+                <img src="h1.png" alt="Dubai Silicon Oasis Apartments">
+              </div>
+              <div class="apartment-info">
+                <h3 class="apartment-title">Dubai Silicon Oasis Apartments For Rent</h3>
+                <p class="apartment-location">Dubai Silicon Oasis</p>
+                <p class="apartment-price">AED 45,000/year</p>
+              </div>
+            </div>
+			
+            <div class="apartment-card">
+              <div class="property-image">
+                <img src="h2.png" alt="Studio for Rent Monthly in Dubai">
+              </div>
+              <div class="apartment-info">
+                <h3 class="apartment-title">Studio for Rent Monthly in Dubai</h3>
+                <p class="apartment-location">Various Locations</p>
+                <p class="apartment-price">AED 3,500/month</p>
+              </div>
+            </div>
+            <div class="apartment-card">
+              <div class="property-image">
+                <img src="h3.png" alt="1 BHK for Rent in Dubai">
+              </div>
+              <div class="apartment-info">
+                <h3 class="apartment-title">1 BHK for Rent in Dubai</h3>
+                <p class="apartment-location">Various Locations</p>
+                <p class="apartment-price">AED 55,000/year</p>
+              </div>
+            </div>
+            <div class="apartment-card">
+              <div class="property-image">
+                <img src="h4.png" alt="3 Bedroom Apartments for Rent in Dubai">
+              </div>
+              <div class="apartment-info">
+                <h3 class="apartment-title">3 Bedroom Apartments for Rent in Dubai</h3>
+                <p class="apartment-location">Various Locations</p>
+                <p class="apartment-price">AED 120,000/year</p>
+              </div>
+            </div>
+            <div class="apartment-card">
+              <div class="property-image">
+                <img src="h5.png" alt="Apartments for Rent in Downtown Dubai">
+              </div>
+              <div class="apartment-info">
+                <h3 class="apartment-title">Apartments for Rent in Downtown Dubai</h3>
+                <p class="apartment-location">Downtown Dubai</p>
+                <p class="apartment-price">AED 150,000/year</p>
+              </div>
+            </div>
+            <div class="apartment-card">
+              <div class="property-image">
+                <img src="h6.png" alt="Apartments for Rent in Jumeirah Village Circle">
+              </div>
+              <div class="apartment-info">
+                <h3 class="apartment-title">Apartments for Rent in Jumeirah Village Circle</h3>
+                <p class="apartment-location">Jumeirah Village Circle</p>
+                <p class="apartment-price">AED 75,000/year</p>
+              </div>
+            </div>
+			
+			     <div class="apartment-card">
+              <div class="property-image">
+                <img src="h7.png" alt="Apartments for Rent in Jumeirah Village Circle">
+              </div>
+              <div class="apartment-info">
+                <h3 class="apartment-title">Apartments for Rent in Jumeirah Village Circle</h3>
+                <p class="apartment-location">Jumeirah Village Circle</p>
+                <p class="apartment-price">AED 95,000/year</p>
+              </div>
+            </div>
+			
+			     <div class="apartment-card">
+              <div class="property-image">
+                <img src="h6.png" alt="Apartments for Rent in Jumeirah Village Circle">
+              </div>
+              <div class="apartment-info">
+                <h3 class="apartment-title">Apartments for Rent in Jumeirah Village Circle</h3>
+                <p class="apartment-location">Jumeirah Village Circle</p>
+                <p class="apartment-price">AED 65,000/year</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Abu Dhabi Content -->
+        <div class="city-content" id="abudhabi">
+          <h2>Find Apartments in Abu Dhabi</h2>
+          <div class="apartments-grid">
+            <div class="apartment-card">
+              <div class="property-image">
+                <img src="h7.png" alt="Luxury Apartments in Corniche Area">
+              </div>
+              <div class="apartment-info">
+                <h3 class="apartment-title">Luxury Apartments in Corniche Area</h3>
+                <p class="apartment-location">Corniche, Abu Dhabi</p>
+                <p class="apartment-price">AED 180,000/year</p>
+              </div>
+            </div>
+            <div class="apartment-card">
+              <div class="property-image">
+                <img src="h8.png" alt="2 BHK in Al Reem Island">
+              </div>
+              <div class="apartment-info">
+                <h3 class="apartment-title">2 BHK in Al Reem Island</h3>
+                <p class="apartment-location">Al Reem Island</p>
+                <p class="apartment-price">AED 95,000/year</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sharjah Content -->
+        <div class="city-content" id="sharjah">
+          <h2> Find Apartments in Sharjah </h2>
+          <div class="apartments-grid">
+            <div class="apartment-card">
+              <div class="property-image">
+                <img src="h9.png" alt="Affordable Apartments in Al Nahda">
+              </div>
+              <div class="apartment-info">
+                <h3 class="apartment-title">Affordable Apartments in Al Nahda</h3>
+                <p class="apartment-location">Al Nahda, Sharjah</p>
+                <p class="apartment-price">AED 35,000/year</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Other cities would follow the same pattern -->
+        <div class="city-content" id="ajman">
+          <h2>Find Apartments in Ajman</h2>
+          <!-- Content for Ajman -->
+        </div>
+        <div class="city-content" id="rasalkhaimah">
+          <h2>Find Apartments in Ras Al Khaimah</h2>
+          <!-- Content for Ras Al Khaimah -->
+        </div>
+        <div class="city-content" id="alain">
+          <h2>Find Apartments in Al Ain</h2>
+          <!-- Content for Al Ain -->
+        </div>
+        <div class="city-content" id="fujairah">
+          <h2>Find Apartments in Fujairah</h2>
+          <!-- Content for Fujairah -->
+        </div>
+        <div class="city-content" id="ummquwain">
+          <h2>Find Apartments in Umm Al Quwain</h2>
+          <!-- Content for Umm Al Quwain -->
+        </div>
+      </div>
+      <!-- Explore more zone ends -->
+    </div>
+    
+    <!-- Abu Dhabi Page -->
+    <div id="abudhabi-page" class="page">
+      <a href="#" class="back-btn" onclick="showPage('home-page')">&larr; Back to Home</a>
+      <div class="page-header">
+        <h1 class="page-title">Abu Dhabi Properties</h1>
+        <p class="page-description">Discover the finest properties in Abu Dhabi, the capital of the United Arab Emirates</p>
+      </div>
+      
+      <div class="explore-con">
+        <h2>Featured Properties in Abu Dhabi</h2>
+        <div class="apartments-grid">
+          <div class="apartment-card">
+            <div class="property-image">
+              <img src="h10.png" alt="Luxury Villa in Saadiyat Island">
+            </div>
+            <div class="apartment-info">
+              <h3 class="apartment-title">Luxury Villa in Saadiyat Island</h3>
+              <p class="apartment-location">Saadiyat Island, Abu Dhabi</p>
+              <p class="apartment-price">AED 3,200,000</p>
+            </div>
+          </div>
+          <div class="apartment-card">
+            <div class="property-image">
+              <img src="h1.png" alt="Modern Apartment in Al Reem Island">
+            </div>
+            <div class="apartment-info">
+              <h3 class="apartment-title">Modern Apartment in Al Reem Island</h3>
+              <p class="apartment-location">Al Reem Island, Abu Dhabi</p>
+              <p class="apartment-price">AED 1,850,000</p>
+            </div>
+          </div>
+          <div class="apartment-card">
+            <div class="property-image">
+              <img src="h1.png" alt="Waterfront Property in Yas Island">
+            </div>
+            <div class="apartment-info">
+              <h3 class="apartment-title">Waterfront Property in Yas Island</h3>
+              <p class="apartment-location">Yas Island, Abu Dhabi</p>
+              <p class="apartment-price">AED 2,750,000</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Sharjah Page -->
+    <div id="sharjah-page" class="page">
+      <a href="#" class="back-btn" onclick="showPage('home-page')">&larr; Back to Home</a>
+      <div class="page-header">
+        <h1 class="page-title">Sharjah Properties</h1>
+        <p class="page-description">Explore affordable and family-friendly properties in Sharjah</p>
+      </div>
+      
+      <div class="explore-con">
+        <h2>Featured Properties in Sharjah</h2>
+        <div class="apartments-grid">
+          <div class="apartment-card">
+            <div class="property-image">
+              <img src="h1.png" alt="Family Apartment in Al Nahda">
+            </div>
+            <div class="apartment-info">
+              <h3 class="apartment-title">Family Apartment in Al Nahda</h3>
+              <p class="apartment-location">Al Nahda, Sharjah</p>
+              <p class="apartment-price">AED 550,000</p>
+            </div>
+          </div>
+          <div class="apartment-card">
+            <div class="property-image">
+              <img src="h1.png" alt="Villa in Al Khan">
+            </div>
+            <div class="apartment-info">
+              <h3 class="apartment-title">Villa in Al Khan</h3>
+              <p class="apartment-location">Al Khan, Sharjah</p>
+              <p class="apartment-price">AED 1,200,000</p>
+            </div>
+          </div>
+          <div class="apartment-card">
+            <div class="property-image">
+              <img src="h1.png" alt="Studio in Al Majaz">
+            </div>
+            <div class="apartment-info">
+              <h3 class="apartment-title">Studio in Al Majaz</h3>
+              <p class="apartment-location">Al Majaz, Sharjah</p>
+              <p class="apartment-price">AED 320,000</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Rent Page -->
+    <div id="rent-page" class="page">
+      <a href="#" class="back-btn" onclick="showPage('home-page')">&larr; Back to Home</a>
+      <div class="page-header">
+        <h1 class="page-title">Rent Properties</h1>
+        <p class="page-description">Find your perfect rental property across the UAE</p>
+      </div>
+      
+      <div class="filters">
+        <h2>Filter Properties</h2>
+        <div class="filter-group">
+          <label for="location">Location</label>
+          <select id="location">
+            <option value="">Any Location</option>
+            <option value="dubai">Dubai</option>
+            <option value="abudhabi">Abu Dhabi</option>
+            <option value="sharjah">Sharjah</option>
+            <option value="ajman">Ajman</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="property-type">Property Type</label>
+          <select id="property-type">
+            <option value="">Any Type</option>
+            <option value="apartment">Apartment</option>
+            <option value="villa">Villa</option>
+            <option value="townhouse">Townhouse</option>
+            <option value="studio">Studio</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="price-range">Price Range (AED/year)</label>
+          <input type="range" id="price-range" min="20000" max="500000" value="200000">
+          <span id="price-value">AED 200,000</span>
+        </div>
+        <div class="filter-actions">
+          <button class="reset-btn">Reset Filters</button>
+          <button class="filter-btn">Apply Filters</button>
+        </div>
+      </div>
+      
+      <div class="explore-con">
+        <h2>Available Rental Properties</h2>
+        <div class="apartments-grid">
+          <div class="apartment-card">
+            <div class="property-image">
+              <img src="h1.png" alt="Luxury Apartment for Rent">
+            </div>
+            <div class="apartment-info">
+              <h3 class="apartment-title">Luxury Apartment in Downtown</h3>
+              <p class="apartment-location">Downtown Dubai</p>
+              <p class="apartment-price">AED 120,000/year</p>
+            </div>
+          </div>
+          <div class="apartment-card">
+            <div class="property-image">
+              <img src="h2.png" alt="Villa for Rent">
+            </div>
+            <div class="apartment-info">
+              <h3 class="apartment-title">Family Villa in Arabian Ranches</h3>
+              <p class="apartment-location">Arabian Ranches, Dubai</p>
+              <p class="apartment-price">AED 180,000/year</p>
+            </div>
+          </div>
+          <div class="apartment-card">
+            <div class="property-image">
+              <img src="h3" alt="Studio for Rent">
+            </div>
+            <div class="apartment-info">
+              <h3 class="apartment-title">Affordable Studio in JLT</h3>
+              <p class="apartment-location">Jumeirah Lake Towers, Dubai</p>
+              <p class="apartment-price">AED 45,000/year</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- News Page -->
+    <div id="news-page" class="page">
+      <a href="#" class="back-btn" onclick="showPage('home-page')">&larr; Back to Home</a>
+      <div class="page-header">
+        <h1 class="page-title">Property News</h1>
+        <p class="page-description">Stay updated with the latest real estate news and market trends in the UAE</p>
+      </div>
+      
+      <div class="news-grid">
+        <div class="news-card">
+          <div class="news-image">
+            <img src="h4.png" alt="Dubai Property Market">
+          </div>
+          <div class="news-content">
+            <h3 class="news-title">Dubai Property Market Shows Strong Growth in Q2 2023</h3>
+            <p class="news-date">July 15, 2023</p>
+            <p class="news-excerpt">The Dubai real estate market continues its upward trajectory with a 12% increase in property transactions compared to the previous quarter.</p>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="news-image">
+            <img src="h5.png" alt="New Development in Abu Dhabi">
+          </div>
+          <div class="news-content">
+            <h3 class="news-title">New Mega Development Announced in Abu Dhabi</h3>
+            <p class="news-date">July 10, 2023</p>
+            <p class="news-excerpt">A new waterfront community with over 5,000 residential units is set to transform the Abu Dhabi skyline by 2026.</p>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="news-image">
+            <img src="h1.png" alt="Sharjah Affordable Housing">
+          </div>
+          <div class="news-content">
+            <h3 class="news-title">Sharjah Launches New Affordable Housing Initiative</h3>
+            <p class="news-date">July 5, 2023</p>
+            <p class="news-excerpt">The government of Sharjah has announced a new initiative to provide 2,000 affordable housing units for Emirati families.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+	<!-- New Explore more zone endss -->
+	
+	
+	
+	
+	
+	
+	
+	<!-- footer section starts -->
+<footer class="footer-container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h5 class="section-title">Discover</h5>
+                <div class="city-slider">
+                    <div class="city-slides">
+                        <div class="city-slide">
+                            <a href="#" class="city-link">Abu Dhabi</a>
+                            <a href="#" class="city-link">Ajman</a>
+                            <a href="#" class="city-link">Dubai</a>
+                            <a href="#" class="city-link">Sharjah</a>
+                        </div>
+                        <div class="city-slide">
+                            <a href="#" class="city-link">Ras Al Khaimah</a>
+                            <a href="#" class="city-link">Al Ain</a>
+                            <a href="#" class="city-link">Fujairah</a>
+                            <a href="#" class="city-link">Umm Al Quwain</a>
+                        </div>
+                    </div>
+                    <div class="slider-arrows">
+                        <div class="slider-arrow prev-arrow">
+                            <i class="fas fa-chevron-left"></i>
+                        </div>
+                        <div class="slider-arrow next-arrow">
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </div>
+                    <div class="slider-nav">
+                        <div class="slider-dot active" data-index="0"></div>
+                        <div class="slider-dot" data-index="1"></div>
+                    </div>
+                </div>
+            </div>
+
+
+
+   <div class="footer-section">
+                <h5 class="section-title"> Help & Support</h5>
+                <div class="policy-links">
+                    <a href="#"> FAQ</a>
+                 <a href="#">Contact Us</a>
+                 <a href="#">Live Chat</a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h5 class="section-title"> About b2bdubai24</h5>
+                <div class="policy-links">
+                    <a href="#">About Us</a>
+                    <a href="#">Terms and Conditions</a>
+					 <a href="#">Privacy Policy</a>
+                    <a href="#">Career</a>
+                </div>
+            </div>
+			
+            <div class="footer-section">
+                <h5 class="section-title"> Blog & Guide </h5>
+                <div class="policy-links">
+                    <a href="#">About Us</a>
+                    <a href="#">Terms and Conditions</a>
+					 <a href="#">Privacy Policy</a>
+                    <a href="#">Career</a>
+                </div>
+            </div>
+        </div>
+			
+			<!-- ✅ FOOTER SECTION -->
+<div class="footer-bottom">
+  <div class="footer-container2">
+    <div class="news-letter">
+      <label for="subscribe">Subscribe To News Letter</label>
+      <input type="email" id="subscribe" placeholder="Your Email Address" required />
+      <button>Subscribe</button>
+    </div>
+
+    <div class="social-icons">
+      <a href="https://www.instagram.com" target="_blank" style="color:#E1306C;"><i class="fab fa-instagram"></i></a>
+      <a href="https://twitter.com" target="_blank" style="color:#1DA1F2;"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.linkedin.com" target="_blank" style="color:#0077B5;"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.facebook.com" target="_blank" style="color:#1877F2;"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.tumblr.com" target="_blank" style="color:#35465C;"><i class="fab fa-tumblr"></i></a>
+      <a href="https://www.pinterest.com" target="_blank" style="color:#E60023;"><i class="fab fa-pinterest"></i></a>
+    </div>
+
+    <div class="footer-copyright">
+      &copy; Copyright 2025 Galaxy IT Park. All rights reserved
+    </div>
+  </div>
+</div>
+	 <!-- footer section ends -->  		
+</footer>  
+
+
+
+
+
+
+
+
+
+
+
+  <!-- JS for Mobile Menu start-->
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const menu = document.getElementById('menu');
+    menuToggle.addEventListener('click', () => {
+      menu.classList.toggle('open');
+    });
+  </script>
+	  <!-- JS for Mobile Menu end-->
+	  
+	  
+<!-- marquee Mobile Menu start-->	  
+<script>
+const marquee = document.getElementById('marquee');
+const leftArrow = document.querySelector('.arrow-left');
+const rightArrow = document.querySelector('.arrow-right');
+
+function startLeft() {
+  marquee.style.animation = 'scroll-left var(--speed) linear infinite';
+}
+
+function startRight() {
+  marquee.style.animation = 'scroll-right var(--speed) linear infinite';
+}
+
+leftArrow.addEventListener('click', () => {
+  startRight();
+});
+
+rightArrow.addEventListener('click', () => {
+  startLeft();
+});
+
+// Start default auto scroll to left
+startLeft();
+</script>	  
+	<!-- marquee Mobile Menu end-->  
+	
+	
+	
+	
+		<!--  /* --- 3 All City Container start --- */--> 
+	<script>
+    const slider = document.getElementById('citySlider');
+    const leftArrow = document.querySelector('.arrow-left');
+    const rightArrow = document.querySelector('.arrow-right');
+
+    let currentIndex = 0;
+
+    function getVisibleCards() {
+      const width = window.innerWidth;
+      if (width <= 412) return 1; // small mobile
+      if (width <= 1023) return 2; // tablet
+      return 4; // desktop
+    }
+
+    function updateSliderPosition() {
+      const cardWidth = slider.querySelector('.card').clientWidth + 10; // include gap
+      slider.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+    }
+
+    rightArrow.addEventListener('click', () => {
+      const visible = getVisibleCards();
+      const totalCards = slider.children.length;
+      if (currentIndex < totalCards - visible) {
+        currentIndex += visible === 2 ? 2 : 1; // slide by visible count
+      } else {
+        currentIndex = 0; // loop back
+      }
+      updateSliderPosition();
+    });
+
+    leftArrow.addEventListener('click', () => {
+      const visible = getVisibleCards();
+      const totalCards = slider.children.length;
+      if (currentIndex > 0) {
+        currentIndex -= visible === 2 ? 2 : 1;
+      } else {
+        currentIndex = totalCards - visible;
+      }
+      updateSliderPosition();
+    });
+
+    window.addEventListener('resize', () => {
+      updateSliderPosition();
+    });
+  </script>
+	<!--  /* --- 3 All City Container ends--- */--> 
+</body>
+</html>

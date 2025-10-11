@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Property Details</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      background: #fff;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .detail-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 20px;
+      align-items: start;
+    }
+
+    .photo {
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    }
+
+    .photo img {
+      width: 100%;
+      height: 520px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .info-panel {
+      background: #fff;
+      border-radius: 10px;
+      padding: 18px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    }
+
+    .info-panel h1 {
+      font-size: 1.4rem;
+      margin: 0 0 8px;
+      color: #212529;
+    }
+
+    .price {
+      font-size: 1.1rem;
+      color: #0d6efd;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .address {
+      color: #6c757d;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.95rem;
+    }
+
+    .meta {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .meta .m {
+      display:flex;
+      align-items:center;
+      gap:8px;
+      background: #f8f9fa;
+      padding: 8px 10px;
+      border-radius: 8px;
+      font-weight: 700;
+      color: #0d6efd;
+    }
+
+    .description {
+      color: #495057;
+      line-height: 1.5;
+      margin-bottom: 14px;
+      font-size: 0.95rem;
+    }
+
+    .back-btn {
+      display:inline-block;
+      margin-top: 6px;
+      text-decoration:none;
+      background:#0d6efd;
+      color:#fff;
+      padding:8px 12px;
+      border-radius:8px;
+      font-weight:700;
+    }
+
+    .not-found {
+      text-align:center;
+      padding: 80px 20px;
+      font-size:1.1rem;
+    }
+
+    @media (max-width: 900px) {
+      .detail-wrapper { grid-template-columns: 1fr; }
+      .photo img { height: 380px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="content">
+    <!-- content populated by JS -->
+  </div>
+
+  <script>
+    // Data for properties (match ids used in index.html)
+    const properties = {
+      "1": {
+        title: "Burj Views Residence",
+        price: "AED 2,450,000",
+        address: "Downtown Dubai",
+        beds: "3 Beds",
+        baths: "2 Baths",
+        area: "1,850 sq.ft",
+        img: "images/pic1.png",
+        badge: "FOR SALE",
+        description: "Spacious apartment with spectacular Burj Khalifa views, high-end finishes and excellent building amenities."
+      },
+      "2": {
+        title: "Sea View Luxury Villa",
+        price: "AED 350,000/yr",
+        address: "Dubai Marina",
+        beds: "4 Beds",
+        baths: "3 Baths",
+        area: "3,200 sq.ft",
+        img: "images/pic2.2.png",
+        badge: "FOR RENT",
+        description: "A luxurious waterfront villa offering private terraces and stunning sea panoramas."
+      },
+      "3": {
+        title: "Dream Luxury Penthouse",
+        price: "AED 8,900,000",
+        address: "Palm Jumeirah",
+        beds: "5 Beds",
+        baths: "4 Baths",
+        area: "4,500 sq.ft",
+        img: "images/pic3.png",
+        badge: "FOR SALE",
+        description: "Ultra-luxe penthouse on Palm Jumeirah featuring floor-to-ceiling windows, private lift and premium amenities."
+      },
+      "4": {
+        title: "Town Center Residence",
+        price: "AED 2,450,000",
+        address: "Downtown Dubai",
+        beds: "3 Beds",
+        baths: "2 Baths",
+        area: "1,850 sq.ft",
+        img: "images/pic4.png",
+        badge: "FOR SALE",
+        description: "Centrally located modern residence, walking distance to shops and dining."
+      },
+      "5": {
+        title: "Silicon Oasis",
+        price: "AED 2,450,000",
+        address: "Dubai",
+        beds: "3 Beds",
+        baths: "2 Baths",
+        area: "1,850 sq.ft",
+        img: "images/pic5.png",
+        badge: "FOR SALE",
+        description: "Comfortable apartment in Silicon Oasis, ideal for families and investors."
+      },
+      "6": {
+        title: "Gulf Lake",
+        price: "AED 2,450,000",
+        address: "Dubai",
+        beds: "3 Beds",
+        baths: "2 Baths",
+        area: "1,850 sq.ft",
+        img: "images/pic6.png",
+        badge: "FOR SALE",
+        description: "Modern lakeside property with scenic views and recreational facilities."
+      },
+      "7": {
+        title: "Sky View Dreams",
+        price: "AED 2,450,000",
+        address: "Downtown Dubai",
+        beds: "3 Beds",
+        baths: "2 Baths",
+        area: "1,850 sq.ft",
+        img: "images/pic7.png",
+        badge: "FOR SALE",
+        description: "Stylish downtown residence with great skyline views."
+      }
+      // add additional entries for id=8..12 if you have them
+    };
+
+    // parse id from URL
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id');
+
+    const content = document.getElementById('content');
+
+    if (!id || !properties[id]) {
+      content.innerHTML = `
+        <div class="not-found">
+          <p>Property not found.</p>
+          <p><a class="back-btn" href="index.html">Back to Listings</a></p>
+        </div>
+      `;
+    } else {
+      const p = properties[id];
+      content.innerHTML = `
+        <div class="detail-wrapper">
+          <div class="photo">
+            <img src="${p.img}" alt="${p.title}">
+          </div>
+          <div class="info-panel">
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <div>
+                <h1>${p.title}</h1>
+                <div class="price">${p.price}</div>
+                <div class="address"><i class="fas fa-map-marker-alt"></i>${p.address}</div>
+              </div>
+              <div style="text-align:right;">
+                <div style="font-weight:800;color:#333">${p.badge}</div>
+              </div>
+            </div>
+
+            <div class="meta">
+              <div class="m"><i class="fas fa-bed"></i> ${p.beds}</div>
+              <div class="m"><i class="fas fa-bath"></i> ${p.baths}</div>
+              <div class="m"><i class="fas fa-ruler-combined"></i> ${p.area}</div>
+            </div>
+
+            <div class="description">${p.description}</div>
+
+            <a class="back-btn" href="index.html">← Back to Listings</a>
+          </div>
+        </div>
+      `;
+    }
+  </script>
+</body>
+</html>
