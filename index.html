@@ -3,129 +3,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Responsive Header & Search </title>
-    <link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Responsive Header + Voice & Search</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<link rel="stylesheet" href="style.css">
 </head>
 
+
 <body>
-   <!-- main head start -->
- <div class="header">
-        <div class="menu-toggle" id="menuToggle"><i class="fa fa-bars"></i> </div>
-        <div class="logo">
-          <a href="#"><img src="logo.png" alt="Logo"></a>
+  
+
+<div class="main-head">
+  <header id="mainHeader">
+    <!-- Mobile Header -->
+    <div class="mobile-header">
+      <div class="left"><i id="menuToggle" class="fa fa-bars"></i></div>
+      <div class="center"><img src="logo.png" alt="Logo" style="width:90px;height:50px;border-radius:8px;"></div>
+      <div class="right">
+        <div class="dropdown">
+          <i class="fa fa-globe"></i>
+          <div class="dropdown-content">
+            <a href="#">EN</a>
+            <a href="#">AR</a>
+          </div>
         </div>
-		
-		<div class="menu-items" >
-        <div class="menu" id="menu">
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Properties</a></li>
-            <li><a href="#">Agents</a></li>
-            <li><a href="#">Agencies</a></li>
-            <li><a href="#">EN ▼</a></li>
-            <li><a href="#">USD ▼</a></li>
-            <li class="country-dropdown">
-              <a href="#">UAE 🚩</a>
-              <ul>
-                <li><a href="#">Saudi Arabia</a></li>
-                <li><a href="#">Qatar</a></li>
-                <li><a href="#"> Bahrain</a></li>
-              </ul>
-            </li>
-            <li><a href="#">👤</a></li>
-            <li><a href="#"><i class="fa fa-bell"></i></a></li>
-          </ul>
+        <i class="fa fa-user"></i>
+        <div class="dropdown">
+          <i class="fa fa-flag"></i>
+          <div class="dropdown-content">
+            <a href="#">UAE</a>
+            <a href="#">UK</a>
+          </div>
         </div>
-        <div class="right-icons">
-          <a href="#">EN ▼</a>
-          <a href="#">👤</a>
-        </div>
-		</div>
+      </div>
     </div>
-	
-	
- <div class="home-div">
-    <!-- Search Section -->
+
+    <!-- Mobile Menu Drawer -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#">Home</a>
+      <a href="#">Properties</a>
+      <a href="#">Agent</a>
+      <a href="#">Agency</a>
+      <a href="#">Loan</a>
+    </div>
+
+    <!-- Desktop Header -->
+    <div class="logo desktop-logo"><a href="#"><img src="logo.png" alt="Logo"></a></div>
+    <nav class="menu">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Properties</a></li>
+        <li><a href="#">Agent</a></li>
+        <li><a href="#">Agency</a></li>
+        <li><a href="#">Loan</a></li>
+        <li><a href="#">Country</a></li>
+        <li><a href="#">Language</a></li>
+        <li><a href="#"><i class="fa fa-bell"></i></a></li>
+        <li><a href="#"><i class="fa fa-user"></i> Sign In</a></li>
+        <li><a href="#"><i class="fa fa-heart"></i></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Search Section -->
+  <div class="content-center">
     <div class="search-bar">
-      <div class="voice-search">
-        <input type="text" placeholder="Search you need...">
-        <button class="btn-camera" onclick="document.getElementById('cameraInput').click()"><i class="fa fa-camera"></i></button>
-        <input type="file" id="cameraInput" accept="image/*" capture="environment" style="display:none">
-        <button class="btn-mic"><i class="fa fa-microphone"></i></button>
-        <button class="btn-search"><i class="fa fa-search"></i></button>
-      </div>
-
-      <div class="search-tab">
-        <div class="status-buttons">
-          <button>ALL STATUS</button>
-          <button>FOR RENT</button>
-          <button>FOR SALE</button>
-        </div>
-
-        <div class="filters">
-          <select>
-            <option>Property Type</option>
-            <option>Apartment</option>
-            <option>Villa</option>
-          </select>
-          <select>
-            <option>All Cities</option>
-            <option>Dubai</option>
-            <option>Abu Dhabi</option>
-          </select>
-          <select>
-            <option>Bedrooms</option>
-            <option>1</option>
-            <option>2</option>
-          </select>
-          <select>
-            <option>Max. Price</option>
-            <option>$1000</option>
-            <option>$2000</option>
-          </select>
-          <button class="search-btn">Search</button>
-        </div>
-      </div>
+      <input type="text" id="searchInput" placeholder="Search what you need..." />
+      <button class="btn-camera" onclick="document.getElementById('cameraInput').click()"><i class="fa fa-camera"></i></button>
+      <input type="file" id="cameraInput" accept="image/*" capture="environment" style="display:none" />
+      <button class="btn-mic" id="micBtn"><i class="fa fa-microphone"></i></button>
+      <button class="btn-search" id="searchBtn"><i class="fa fa-search"></i></button>
     </div>
-  </div>
 
-<!-- ===== Marquee Section ===== -->
-<div class="marquee-wrap">
-  <!-- Arrows -->
-  <button class="arrow arrow-left"><i class="fa-solid fa-chevron-left"></i></button>
-  <button class="arrow arrow-right"><i class="fa-solid fa-chevron-right"></i></button>
-
-  <div class="marquee" id="marquee">
-    <ul class="group">
-      <li><img src="pic1.png" alt=""><span class="tag">SALE</span></li>
-      <li><img src="pic2.png" alt=""><span class="tag">RENT</span></li>
-      <li><img src="pic3.png" alt=""><span class="tag">RENT</span></li>
-      <li><img src="pic4.png" alt=""><span class="tag">SALES</span></li>
-      <li><img src="pic5.png" alt=""><span class="tag">RENT</span></li>
-      <li><img src="pic6.png" alt=""><span class="tag">SALE</span></li>
-      <li><img src="pic7.png" alt=""><span class="tag">RENT</span></li>
-      <li><img src="pic8.png" alt=""><span class="tag">RENT</span></li>
-      <li><img src="pic9.png" alt=""><span class="tag">SALES</span></li>
-      <li><img src="pic10.png" alt=""><span class="tag">SALES</span></li>
-
-      <!-- duplicate all for seamless scroll -->
-      <li><img src="pic1.png" alt=""><span class="tag">SALE</span></li>
-      <li><img src="pic2.png" alt=""><span class="tag">RENT</span></li>
-      <li><img src="pic3.png" alt=""><span class="tag">RENT</span></li>
-      <li><img src="pic4.png" alt=""><span class="tag">SALES</span></li>
-      <li><img src="pic5.png" alt=""><span class="tag">RENT</span></li>
-      <li><img src="pic6.png" alt=""><span class="tag">SALE</span></li>
-      <li><img src="pic7.png" alt=""><span class="tag">RENT</span></li>
-      <li><img src="pic8.png" alt=""><span class="tag">RENT</span></li>
-      <li><img src="pic9.png" alt=""><span class="tag">SALES</span></li>
-      <li><img src="pic10.png" alt=""><span class="tag">SALES</span></li>
-    </ul>
+   
+      <div class="filters">
+	     <select><option>All Status </option><option>Rent</option><option>Sale</option></select>
+        <select><option>Property Type</option><option>Apartment</option><option>Villa</option></select>
+        <select><option>All Cities</option><option>Dubai</option><option>Abu Dhabi</option></select>
+        <select><option>Bedrooms</option><option>1</option><option>2</option></select>
+        <select><option>Max. Price</option><option>$1000</option><option>$2000</option></select>
+        <button class="search-btn">Search</button>
+      </div>
+    
   </div>
 </div>
 
+
+  <!-- ===== Marquee Section ===== -->
+  <div class="marquee-wrap">
+    <div class="marquee" id="marquee">
+      <ul class="group">
+        <li><img src="pic1.png" alt=""><span class="tag">SALE</span></li>
+        <li><img src="pic2.png" alt=""><span class="tag">RENT</span></li>
+        <li><img src="pic3.png" alt=""><span class="tag">RENT</span></li>
+        <li><img src="pic4.png" alt=""><span class="tag">SALES</span></li>
+        <li><img src="pic5.png" alt=""><span class="tag">RENT</span></li>
+        <li><img src="pic6.png" alt=""><span class="tag">SALE</span></li>
+        <li><img src="pic7.png" alt=""><span class="tag">RENT</span></li>
+        <li><img src="pic8.png" alt=""><span class="tag">RENT</span></li>
+        <li><img src="pic9.png" alt=""><span class="tag">SALES</span></li>
+        <li><img src="pic10.png" alt=""><span class="tag">SALES</span></li>
+
+        <!-- duplicate for seamless scroll -->
+        <li><img src="pic1.png" alt=""><span class="tag">SALE</span></li>
+        <li><img src="pic2.png" alt=""><span class="tag">RENT</span></li>
+        <li><img src="pic3.png" alt=""><span class="tag">RENT</span></li>
+        <li><img src="pic4.png" alt=""><span class="tag">SALES</span></li>
+        <li><img src="pic5.png" alt=""><span class="tag">RENT</span></li>
+        <li><img src="pic6.png" alt=""><span class="tag">SALE</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- 2 Marquee City Section start-->
+
+ 
 
 
 <!-- All City Section start-->
@@ -186,7 +179,7 @@
       <!-- Property Cards -->
       <div class="property-card">
         <div class="property-image">
-          <img src="images/pic1.png" alt="Property 1">
+          <img src="pic1.png" alt="Property 1">
         </div>
         <div class="property-info">
           <h3 class="property-title">Burj Views Residence</h3>
@@ -203,7 +196,7 @@
 
       <div class="property-card">
         <div class="property-image">
-          <img src="images/pic2.png" alt="Property 2">
+          <img src="pic2.png" alt="Property 2">
         </div>
         <div class="property-info">
           <h3 class="property-title">Sea View Luxury Villa</h3>
@@ -220,7 +213,59 @@
 
       <div class="property-card">
         <div class="property-image">
-          <img src="images/pic3.png" alt="Property 3">
+        <img src="pic4.png" alt="Property 1">
+        </div>
+        <div class="property-info">
+          <h3 class="property-title">Dream Luxury Penthouse</h3>
+          <div class="property-price">AED 8,00,000</div>
+          <div class="property-address"><i class="fas fa-map-marker-alt"></i> Palm Jumeirah</div>
+          <div class="property-details">
+            <div class="detail"><i class="fas fa-bed"></i><span>5 Beds</span></div>
+            <div class="detail"><i class="fas fa-bath"></i><span>4 Baths</span></div>
+            <div class="detail"><i class="fas fa-ruler-combined"></i><span>4,500 sq.ft</span></div>
+          </div>
+          <a href="#" class="view-btn">View Details</a>
+        </div>
+      </div>
+	  
+	  
+	  <div class="property-card">
+        <div class="property-image">
+          <img src="pic4.png" alt="Property 1">
+        </div>
+        <div class="property-info">
+          <h3 class="property-title">Burj Views Residence</h3>
+          <div class="property-price">AED 2,450,000</div>
+          <div class="property-address"><i class="fas fa-map-marker-alt"></i> Downtown Dubai</div>
+          <div class="property-details">
+            <div class="detail"><i class="fas fa-bed"></i><span>3 Beds</span></div>
+            <div class="detail"><i class="fas fa-bath"></i><span>2 Baths</span></div>
+            <div class="detail"><i class="fas fa-ruler-combined"></i><span>1,850 sq.ft</span></div>
+          </div>
+          <a href="#" class="view-btn">View Details</a>
+        </div>
+      </div>
+
+      <div class="property-card">
+        <div class="property-image">
+          <img src="pic5.png" alt="Property 2">
+        </div>
+        <div class="property-info">
+          <h3 class="property-title">Sea View Luxury Villa</h3>
+          <div class="property-price">AED 350,000/yr</div>
+          <div class="property-address"><i class="fas fa-map-marker-alt"></i> Dubai Marina</div>
+          <div class="property-details">
+            <div class="detail"><i class="fas fa-bed"></i><span>4 Beds</span></div>
+            <div class="detail"><i class="fas fa-bath"></i><span>3 Baths</span></div>
+            <div class="detail"><i class="fas fa-ruler-combined"></i><span>3,200 sq.ft</span></div>
+          </div>
+          <a href="#" class="view-btn">View Details</a>
+        </div>
+      </div>
+
+      <div class="property-card">
+        <div class="property-image">
+          <img src="pic6.png" alt="Property 3">
         </div>
         <div class="property-info">
           <h3 class="property-title">Dream Luxury Penthouse</h3>
@@ -238,7 +283,7 @@
 	  
 	  <div class="property-card">
         <div class="property-image">
-          <img src="images/pic4.png" alt="Property 1">
+          <img src="pic7.png" alt="Property 1">
         </div>
         <div class="property-info">
           <h3 class="property-title">Burj Views Residence</h3>
@@ -255,7 +300,7 @@
 
       <div class="property-card">
         <div class="property-image">
-          <img src="images/pic5.png" alt="Property 2">
+          <img src="pic8.png" alt="Property 2">
         </div>
         <div class="property-info">
           <h3 class="property-title">Sea View Luxury Villa</h3>
@@ -272,63 +317,11 @@
 
       <div class="property-card">
         <div class="property-image">
-          <img src="images/pic6.png" alt="Property 3">
+          <img src="pic9.png" alt="Property 3">
         </div>
         <div class="property-info">
           <h3 class="property-title">Dream Luxury Penthouse</h3>
-          <div class="property-price">AED 8,900,000</div>
-          <div class="property-address"><i class="fas fa-map-marker-alt"></i> Palm Jumeirah</div>
-          <div class="property-details">
-            <div class="detail"><i class="fas fa-bed"></i><span>5 Beds</span></div>
-            <div class="detail"><i class="fas fa-bath"></i><span>4 Baths</span></div>
-            <div class="detail"><i class="fas fa-ruler-combined"></i><span>4,500 sq.ft</span></div>
-          </div>
-          <a href="#" class="view-btn">View Details</a>
-        </div>
-      </div>
-	  
-	  
-	  <div class="property-card">
-        <div class="property-image">
-          <img src="images/pic7.png" alt="Property 1">
-        </div>
-        <div class="property-info">
-          <h3 class="property-title">Burj Views Residence</h3>
-          <div class="property-price">AED 2,450,000</div>
-          <div class="property-address"><i class="fas fa-map-marker-alt"></i> Downtown Dubai</div>
-          <div class="property-details">
-            <div class="detail"><i class="fas fa-bed"></i><span>3 Beds</span></div>
-            <div class="detail"><i class="fas fa-bath"></i><span>2 Baths</span></div>
-            <div class="detail"><i class="fas fa-ruler-combined"></i><span>1,850 sq.ft</span></div>
-          </div>
-          <a href="#" class="view-btn">View Details</a>
-        </div>
-      </div>
-
-      <div class="property-card">
-        <div class="property-image">
-          <img src="images/pic8.png" alt="Property 2">
-        </div>
-        <div class="property-info">
-          <h3 class="property-title">Sea View Luxury Villa</h3>
-          <div class="property-price">AED 350,000/yr</div>
-          <div class="property-address"><i class="fas fa-map-marker-alt"></i> Dubai Marina</div>
-          <div class="property-details">
-            <div class="detail"><i class="fas fa-bed"></i><span>4 Beds</span></div>
-            <div class="detail"><i class="fas fa-bath"></i><span>3 Baths</span></div>
-            <div class="detail"><i class="fas fa-ruler-combined"></i><span>3,200 sq.ft</span></div>
-          </div>
-          <a href="#" class="view-btn">View Details</a>
-        </div>
-      </div>
-
-      <div class="property-card">
-        <div class="property-image">
-          <img src="images/pic9.png" alt="Property 3">
-        </div>
-        <div class="property-info">
-          <h3 class="property-title">Dream Luxury Penthouse</h3>
-          <div class="property-price">AED 8,900,000</div>
+          <div class="property-price">AED 4,900,000</div>
           <div class="property-address"><i class="fas fa-map-marker-alt"></i> Palm Jumeirah</div>
           <div class="property-details">
             <div class="detail"><i class="fas fa-bed"></i><span>5 Beds</span></div>
@@ -341,7 +334,7 @@
 	  
 	  <div class="property-card">
         <div class="property-image">
-          <img src="images/pic10.png" alt="Property 1">
+          <img src="pic10.png" alt="Property 1">
         </div>
         <div class="property-info">
           <h3 class="property-title">Burj Views Residence</h3>
@@ -358,7 +351,7 @@
 
       <div class="property-card">
         <div class="property-image">
-          <img src="images/pic11.png" alt="Property 2">
+          <img src="pic11.png" alt="Property 2">
         </div>
         <div class="property-info">
           <h3 class="property-title">Sea View Luxury Villa</h3>
@@ -375,11 +368,11 @@
 
       <div class="property-card">
         <div class="property-image">
-          <img src="images/pic12.png" alt="Property 3">
+          <img src="pic12.png" alt="Property 3">
         </div>
         <div class="property-info">
           <h3 class="property-title">Dream Luxury Penthouse</h3>
-          <div class="property-price">AED 8,900,000</div>
+          <div class="property-price">AED 1100,000</div>
           <div class="property-address"><i class="fas fa-map-marker-alt"></i> Palm Jumeirah</div>
           <div class="property-details">
             <div class="detail"><i class="fas fa-bed"></i><span>5 Beds</span></div>
@@ -1007,54 +1000,73 @@
 
 
 
-
-
-
-
-
-  <!-- JS for Mobile Menu start-->
-
-  <script>
-    const menuToggle = document.getElementById('menuToggle');
-    const menu = document.getElementById('menu');
-    menuToggle.addEventListener('click', () => {
-      menu.classList.toggle('open');
-    });
-  </script>
-	  <!-- JS for Mobile Menu end-->
-	  
-	  
-<!-- marquee Mobile Menu start-->	  
-<script>
-const marquee = document.getElementById('marquee');
-const leftArrow = document.querySelector('.arrow-left');
-const rightArrow = document.querySelector('.arrow-right');
-
-function startLeft() {
-  marquee.style.animation = 'scroll-left var(--speed) linear infinite';
-}
-
-function startRight() {
-  marquee.style.animation = 'scroll-right var(--speed) linear infinite';
-}
-
-leftArrow.addEventListener('click', () => {
-  startRight();
+ <!-- JS for Mobile Menu head div start-->
+ <script>
+// ===== Hide Header on Scroll =====
+let lastScrollY = window.scrollY;
+const header = document.getElementById('mainHeader');
+window.addEventListener('scroll', () => {
+  header.classList.toggle('hide', window.scrollY > lastScrollY);
+  lastScrollY = window.scrollY;
 });
 
-rightArrow.addEventListener('click', () => {
-  startLeft();
+// ===== Mobile Menu Toggle =====
+const menuToggle = document.getElementById('menuToggle');
+const mobileMenu = document.getElementById('mobileMenu');
+menuToggle.addEventListener('click', () => {
+  mobileMenu.style.display = (mobileMenu.style.display === 'flex') ? 'none' : 'flex';
 });
 
-// Start default auto scroll to left
-startLeft();
-</script>	  
-	<!-- marquee Mobile Menu end-->  
+// ===== Voice Search =====
+const micBtn = document.getElementById('micBtn');
+const searchInput = document.getElementById('searchInput');
+const searchBtn = document.getElementById('searchBtn');
+let isListening = false;
+let recognition;
+
+if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
+  const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+  recognition = new SpeechRecognition();
+  recognition.continuous = false;
+  recognition.interimResults = false;
+  recognition.lang = 'en-US';
+
+  recognition.onstart = () => {
+    isListening = true;
+    micBtn.querySelector('i').style.color = 'red';
+  };
+
+  recognition.onend = () => {
+    isListening = false;
+    micBtn.querySelector('i').style.color = '#3436a8';
+  };
+
+  recognition.onresult = (event) => {
+    const transcript = event.results[0][0].transcript;
+    searchInput.value = transcript;
+  };
+
+  micBtn.addEventListener('click', () => {
+    if (isListening) recognition.stop(); else recognition.start();
+  });
+} else {
+  micBtn.addEventListener('click', () => alert('Voice recognition not supported.'));
+}
+
+// ===== Search Button =====
+searchBtn.addEventListener('click', () => {
+  const query = searchInput.value.trim();
+  if (query) alert(`Searching for: ${query}`);
+  else alert('Please enter something to search.');
+});
+searchInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') searchBtn.click(); });
+</script>
+ <!-- header and search end--> 
+ 
+<!-- marquee Mobile Menu end-->  
 	
 	
-	
-	
-		<!--  /* --- 3 All City Container start --- */--> 
+<!--  /* --- 3 All City Container start --- */--> 
 	<script>
     const slider = document.getElementById('citySlider');
     const leftArrow = document.querySelector('.arrow-left');
