@@ -566,12 +566,11 @@ h2 {font-size: 1.5rem;  text-align: center;   margin: 40px 20px 20px;    font-we
 /* Add your actual image paths here */ 
 
 .ceo-image.left {
-  background-image: url("ceo.png");
-}
+  background: url("ceo.png") no-repeat center center/cover;}
+
 
 .ceo-image.right {
-  background-image: url("ceo2.png");
-}
+   background: url("ceo2.png") no-repeat center center/cover;}
 
 .ceo-image.visible {
   opacity: 1;
