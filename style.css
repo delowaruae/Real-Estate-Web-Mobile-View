@@ -538,14 +538,51 @@ h2 {font-size: 1.5rem;  text-align: center;   margin: 40px 20px 20px;    font-we
  
 
  /* 11 ============ CEO Message Section ============ */ 
-.ceo-message { display: flex; align-items: stretch; justify-content: space-between; width: 90%; overflow: hidden; flex-wrap: nowrap; margin: 60px auto; } 
+.ceo-message {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  width: 100%;
+  min-height: auto;
+  overflow: hidden;
+  flex-wrap: nowrap;
+  margin: 60px 0;
+}
 /* ---- Side Images ---- */ 
-.ceo-image { flex: 1 1 33.33%; background-size: cover; background-position: center; background-repeat: no-repeat; opacity: 0; transform: translateY(60px); transition: opacity 1.2s ease, transform 1.2s ease; min-height: 500px; /* ✅ smaller height for desktop */ border-radius: 8px; } 
+
+
+.ceo-image {
+  flex: 1 1 33.33%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 1.2s ease, transform 1.2s ease;
+  min-height: 500px; /* ✅ smaller height for desktop */
+  border-radius: 8px;
+}
 
 /* Add your actual image paths here */ 
-.ceo-image.left { background-image: url("ceo.png"); } 
-.ceo-image.right { background-image: url("ceo2.png"); } 
-.ceo-image.visible { opacity: 1; transform: translateY(0); } 
+
+.ceo-image.left {
+  background-image: url("ceo.png");
+}
+
+.ceo-image.right {
+  background-image: url("ceo2.png");
+}
+
+.ceo-image.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+
+
+
 /* ---- Center Text ---- */ 
 .ceo-text { flex: 1 1 33.33%; display: flex; flex-direction: column; justify-content: stretch; align-items: center; background: transparent; color: #000; text-align: center; padding: 40px 30px; opacity: 0; transform: translateY(60px); transition: opacity 1.2s ease, transform 1.2s ease; } 
 .ceo-text.visible { opacity: 1; transform: translateY(0); } 
