@@ -10,7 +10,6 @@
 <link rel="stylesheet" href="style.css">
 </head>
 
-
 <body>
   
 
@@ -19,7 +18,7 @@
     <!-- Mobile Header -->
     <div class="mobile-header">
       <div class="left"><i id="menuToggle" class="fa fa-bars"></i></div>
-      <div class="center"><img src="logo.png" alt="Logo" style="width:90px;height:50px;border-radius:8px;"></div>
+      <div class="center"> <img src="logo.png" alt="Logo" style="width:90px;height:50px;border-radius:8px;"></div>
       <div class="right">
         <div class="dropdown">
           <i class="fa fa-globe"></i>
@@ -77,7 +76,7 @@
     </div>
 
    
-      <div class="filters">
+      <div class="filter">
 	     <select><option>All Status </option><option>Rent</option><option>Sale</option></select>
         <select><option>Property Type</option><option>Apartment</option><option>Villa</option></select>
         <select><option>All Cities</option><option>Dubai</option><option>Abu Dhabi</option></select>
@@ -122,27 +121,52 @@
 
 
 <!-- All City Section start-->
-  <div class="city-div">
-  <h1>Choose Your Desired City</h1>
+  <div class="allcity-container">
+    <!-- Arrows -->
+    <button class="arrow arrow-left"><i class="fa-solid fa-chevron-left"></i></button>
+    <button class="arrow arrow-right"><i class="fa-solid fa-chevron-right"></i></button>
 
-  <div class="carousel-city" id="carouselCity">
-    <button class="carousel-btn prev" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
-    <button class="carousel-btn next" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+    <div class="allcity" id="citySlider">
 
-    <div class="carousel-track" id="carouselTrack">
-      <div class="city-pic"><img src="city1.png"><div class="city-pic-content"><div class="properties">5012 Properties</div><div class="city">Dubai</div></div><a href="#" class="more-details">MORE DETAILS</a></div>
-      <div class="city-pic"><img src="city2.png"><div class="city-pic-content"><div class="properties">1224 Properties</div><div class="city">Sharjah</div></div><a href="#" class="more-details">MORE DETAILS</a></div>
-      <div class="city-pic"><img src="city3.png"><div class="city-pic-content"><div class="properties">3507 Properties</div><div class="city">Abu Dhabi</div></div><a href="#" class="more-details">MORE DETAILS</a></div>
-      <div class="city-pic"><img src="city4.png"><div class="city-pic-content"><div class="properties">2305 Properties</div><div class="city">Ajman</div></div><a href="#" class="more-details">MORE DETAILS</a></div>
-      <div class="city-pic"><img src="city5.png"><div class="city-pic-content"><div class="properties">4122 Properties</div><div class="city">Marina</div></div><a href="#" class="more-details">MORE DETAILS</a></div>
-      <div class="city-pic"><img src="city6.png"><div class="city-pic-content"><div class="properties">1800 Properties</div><div class="city">Jumeirah</div></div><a href="#" class="more-details">MORE DETAILS</a></div>
+      <div class="card">
+        <img src="city1.png" alt="Dubai">
+        <div class="card-content">
+          <div class="properties">12 Properties</div>
+          <div class="city">Dubai</div>
+        </div>
+        <a href="dubai.html" class="more-details">MORE DETAILS</a>
+      </div>
+
+      <div class="card">
+        <img src="city2.png" alt="Sharjah">
+        <div class="card-content">
+          <div class="properties">4 Properties</div>
+          <div class="city">Sharjah</div>
+        </div>
+        <a href="sharjah.html" class="more-details">MORE DETAILS</a>
+      </div>
+
+      <div class="card">
+        <img src="city3.png" alt="Abu Dhabi">
+        <div class="card-content">
+          <div class="properties">7 Properties</div>
+          <div class="city">Abu Dhabi</div>
+        </div>
+        <a href="abudhabi.html" class="more-details">MORE DETAILS</a>
+      </div>
+
+      <div class="card">
+        <img src="city4.png" alt="Ajman">
+        <div class="card-content">
+          <div class="properties">5 Properties</div>
+          <div class="city">Ajman</div>
+        </div>
+        <a href="ajman.html" class="more-details">MORE DETAILS</a>
+      </div>
+
     </div>
-
-    <div class="carousel-dots" id="carouselDots"></div>
   </div>
-</div>
-
-<!-- 3 All City Section end -->
+<!-- All City Section end -->
 
 
 <!-- 4 Property Gallery Section -->
@@ -364,19 +388,20 @@
 
 
 
-
 <!-- 5 New Explore more zone starts -->
 	<main class="container">
     <!-- Home Page -->
     <div id="home-page" class="page active">
       <!-- Explore more zone -->
       <div class="explore-con">
-        <h1>5 Explore More Zone</h1>
+        <h1>Explore More Zone</h1>
 
         <div class="nav-tabs">
           <button class="tab-btn active" data-tab="rent">Rent</button>
           <button class="tab-btn" data-tab="buy">Buy</button>
           <button class="tab-btn" data-tab="invest">Invest</button>
+          <button class="tab-btn" data-tab="explore">Explore</button>
+          <button class="tab-btn" data-tab="news">News</button>
         </div>
 
         <div class="city-buttons">
@@ -545,18 +570,18 @@
       </div>
   
     </div>
-  
+        <!-- Explore more zone ends -->
 		
-    <!-- ------------------------Abu Dhabi Page---------------------------- -->
+    <!-- Abu Dhabi Page -->
     <div id="abudhabi-page" class="page">
       <a href="#" class="back-btn" onclick="showPage('home-page')">&larr; Back to Home</a>
       <div class="page-header">
-        <h1 class="page-title"> Abu Dhabi Properties</h1>
+        <h1 class="page-title">Abu Dhabi Properties</h1>
         <p class="page-description">Discover the finest properties in Abu Dhabi, the capital of the United Arab Emirates</p>
       </div>
       
       <div class="explore-con">
-        <h2> Featured Properties in Abu Dhabi</h2>
+        <h2>Featured Properties in Abu Dhabi</h2>
         <div class="apartments-grid">
           <div class="apartment-card">
             <div class="property-image">
@@ -592,11 +617,11 @@
       </div>
     </div>
     
-    <!-- ---------------------Sharjah Page---------------------- -->
+    <!-- Sharjah Page -->
     <div id="sharjah-page" class="page">
       <a href="#" class="back-btn" onclick="showPage('home-page')">&larr; Back to Home</a>
       <div class="page-header">
-        <h1 class="page-title"> Sharjah Properties </h1>
+        <h1 class="page-title">Sharjah Properties</h1>
         <p class="page-description">Explore affordable and family-friendly properties in Sharjah</p>
       </div>
       
@@ -637,11 +662,85 @@
       </div>
     </div>
     
-   
+    <!-- Rent Page -->
+    <div id="rent-page" class="page">
+      <a href="#" class="back-btn" onclick="showPage('home-page')">&larr; Back to Home</a>
+      <div class="page-header">
+        <h1 class="page-title">Rent Properties</h1>
+        <p class="page-description">Find your perfect rental property across the UAE</p>
+      </div>
+      
+      <div class="filters">
+        <h2>Filter Properties</h2>
+        <div class="filter-group">
+          <label for="location">Location</label>
+          <select id="location">
+            <option value="">Any Location</option>
+            <option value="dubai">Dubai</option>
+            <option value="abudhabi">Abu Dhabi</option>
+            <option value="sharjah">Sharjah</option>
+            <option value="ajman">Ajman</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="property-type">Property Type</label>
+          <select id="property-type">
+            <option value="">Any Type</option>
+            <option value="apartment">Apartment</option>
+            <option value="villa">Villa</option>
+            <option value="townhouse">Townhouse</option>
+            <option value="studio">Studio</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="price-range">Price Range (AED/year)</label>
+          <input type="range" id="price-range" min="20000" max="500000" value="200000">
+          <span id="price-value">AED 200,000</span>
+        </div>
+        <div class="filter-actions">
+          <button class="reset-btn">Reset Filters</button>
+          <button class="filter-btn">Apply Filters</button>
+        </div>
+      </div>
+      
+      <div class="explore-con">
+        <h2>Available Rental Properties</h2>
+        <div class="apartments-grid">
+          <div class="apartment-card">
+            <div class="property-image">
+              <img src="h1.png" alt="Luxury Apartment for Rent">
+            </div>
+            <div class="apartment-info">
+              <h3 class="apartment-title">Luxury Apartment in Downtown</h3>
+              <p class="apartment-location">Downtown Dubai</p>
+              <p class="apartment-price">AED 120,000/year</p>
+            </div>
+          </div>
+          <div class="apartment-card">
+            <div class="property-image">
+              <img src="h2.png" alt="Villa for Rent">
+            </div>
+            <div class="apartment-info">
+              <h3 class="apartment-title">Family Villa in Arabian Ranches</h3>
+              <p class="apartment-location">Arabian Ranches, Dubai</p>
+              <p class="apartment-price">AED 180,000/year</p>
+            </div>
+          </div>
+          <div class="apartment-card">
+            <div class="property-image">
+              <img src="h3" alt="Studio for Rent">
+            </div>
+            <div class="apartment-info">
+              <h3 class="apartment-title">Affordable Studio in JLT</h3>
+              <p class="apartment-location">Jumeirah Lake Towers, Dubai</p>
+              <p class="apartment-price">AED 45,000/year</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     
-	
-	
-    <!------------------ News Page ----------------->
+    <!-- News Page -->
     <div id="news-page" class="page">
       <a href="#" class="back-btn" onclick="showPage('home-page')">&larr; Back to Home</a>
       <div class="page-header">
@@ -699,10 +798,10 @@
     <button class="tab-btn" onclick="showTab('rent')">Rent</button>
 </div>
 
-<div class="district-btn">
-    <button class="district-btn active">Dubai</button>
-    <button class="district-btn">Abu Dhabi</button>
-    <button class="district-btn">Sharjah</button>
+<div class="city-buttons">
+    <button class="city-btn active">Dubai</button>
+    <button class="city-btn">Abu Dhabi</button>
+    <button class="city-btn">Sharjah</button>
 </div>
 
 <div id="sale" class="section">
@@ -766,7 +865,7 @@
 </div>
 </div>
 </div>
-<!-- 6 Your Popular Real Estate Searches end -->	
+<!-- Your Popular Real Estate Searches end -->	
 
 
 
@@ -903,128 +1002,127 @@
 	
 	
 	
-<!--8 Premium Real Estate Agents start --> 
-
-<section class="prem-agent">
-  <div class="headline">
-    <h1>8 Premium Real Estate Agents</h1>
-    <p>Meet our team of award-winning agents dedicated to finding your dream property</p>
-  </div>
-
-  <div class="carousel-container">
-    <div class="nav-btn prev" id="prevAgents"><i class="fas fa-chevron-left"></i></div>
-    <div class="nav-btn next" id="nextAgents"><i class="fas fa-chevron-right"></i></div>
-
-    <div class="agents-carousel">
-      <div class="agents-slide" id="agentsTrack">
-        <!-- Repeat agent cards -->
-        <div class="agent-card">
-          <div class="agent-photo"><img src="pro1.png" alt="Delowar"></div>
-          <div class="agent-name">Delowar Hossain</div>
-          <div class="agent-title">SENIOR AGENT</div>
-          <div class="agent-details">
-            <p><i class="fas fa-home"></i>24 Properties</p>
-            <p><i class="fas fa-globe"></i>English, Arabic, Hindi, Bangla</p>
-            <p><i class="fas fa-star"></i>8 years experience</p>
-          </div>
-          <a class="view-profile" href="profile-delowar.html">View Profile</a>
-        </div>
-
-        <div class="agent-card">
-          <div class="agent-photo"><img src="pro2.png" alt="Zainab"></div>
-          <div class="agent-name">Zainab Mohammed</div>
-          <div class="agent-title">LUXURY SPECIALIST</div>
-          <div class="agent-details">
-            <p><i class="fas fa-home"></i>32 Properties</p>
-            <p><i class="fas fa-globe"></i>English, French</p>
-            <p><i class="fas fa-star"></i>6 years experience</p>
-          </div>
-          <a class="view-profile" href="profile-zainab.html">View Profile</a>
-        </div>
-
-        <div class="agent-card">
-          <div class="agent-photo"><img src="pro3.png" alt="Hamza"></div>
-          <div class="agent-name">Hamza Ali</div>
-          <div class="agent-title">LUXURY SPECIALIST</div>
-          <div class="agent-details">
-            <p><i class="fas fa-home"></i>28 Properties</p>
-            <p><i class="fas fa-globe"></i>English, Urdu</p>
-            <p><i class="fas fa-star"></i>5 years experience</p>
-          </div>
-          <a class="view-profile" href="profile-hamza.html">View Profile</a>
-        </div>
-
-        <div class="agent-card">
-          <div class="agent-photo"><img src="pro4.png" alt="Yousuf"></div>
-          <div class="agent-name">Yousuf Bin Ali</div>
-          <div class="agent-title">COMMERCIAL EXPERT</div>
-          <div class="agent-details">
-            <p><i class="fas fa-home"></i>19 Properties</p>
-            <p><i class="fas fa-globe"></i>English, Arabic</p>
-            <p><i class="fas fa-star"></i>7 years experience</p>
-          </div>
-          <a class="view-profile" href="profile-yousuf.html">View Profile</a>
-        </div>
-
-        <div class="agent-card">
-          <div class="agent-photo"><img src="pro5.png" alt="Zara"></div>
-          <div class="agent-name">Zara Loren Diota</div>
-          <div class="agent-title">INTERNATIONAL AGENT</div>
-          <div class="agent-details">
-            <p><i class="fas fa-home"></i>27 Properties</p>
-            <p><i class="fas fa-globe"></i>English, Spanish</p>
-            <p><i class="fas fa-star"></i>10 years experience</p>
-          </div>
-          <a class="view-profile" href="profile-zara.html">View Profile</a>
-        </div>
-
-        <div class="agent-card">
-          <div class="agent-photo"><img src="pro6.png" alt="Fatima"></div>
-          <div class="agent-name">Fatima Ali</div>
-          <div class="agent-title">COMMERCIAL EXPERT</div>
-          <div class="agent-details">
-            <p><i class="fas fa-home"></i>19 Properties</p>
-            <p><i class="fas fa-globe"></i>English, Arabic</p>
-            <p><i class="fas fa-star"></i>7 years experience</p>
-          </div>
-          <a class="view-profile" href="profile-fatima.html">View Profile</a>
-        </div>
-
-        <div class="agent-card">
-          <div class="agent-photo"><img src="pro7.png" alt="Samir"></div>
-          <div class="agent-name">Samir Khan</div>
-          <div class="agent-title">CITY SPECIALIST</div>
-          <div class="agent-details">
-            <p><i class="fas fa-home"></i>15 Properties</p>
-            <p><i class="fas fa-globe"></i>English</p>
-            <p><i class="fas fa-star"></i>4 years experience</p>
-          </div>
-          <a class="view-profile" href="profile-samir.html">View Profile</a>
-        </div>
-
-        <div class="agent-card">
-          <div class="agent-photo"><img src="pro8.png" alt="Nadia"></div>
-          <div class="agent-name">Nadia Rahman</div>
-          <div class="agent-title">RESIDENTIAL EXPERT</div>
-          <div class="agent-details">
-            <p><i class="fas fa-home"></i>21 Properties</p>
-            <p><i class="fas fa-globe"></i>English, Arabic</p>
-            <p><i class="fas fa-star"></i>9 years experience</p>
-          </div>
-          <a class="view-profile" href="profile-nadia.html">View Profile</a>
-        </div>
-      </div>
+<!--8 Premium Real Estate Agents --> 
+  <div class="prem-agent">
+    <div class="headline">
+      <h1>8 Premium Real Estate Agents</h1>
+      <p>Meet our team of award-winning agents dedicated to finding your dream property</p>
     </div>
 
-    <div class="pagination" id="agentsPagination"></div>
-  </div>
-</section>
+    <div class="carousel-container">
+      <div class="nav-btn prev" aria-label="previous"><i class="fas fa-chevron-left"></i></div>
+      <div class="nav-btn next" aria-label="next"><i class="fas fa-chevron-right"></i></div>
 
+      <div class="agents-carousel">
+        <!-- sliding track -->
+        <div class="agents-slide" id="agentsTrack">
+          <div class="agent-card">
+            <div class="agent-photo"><img src="pro1.png" alt="Delowar"></div>
+            <div class="agent-name">Delowar Hossain</div>
+            <div class="agent-title">SENIOR AGENT</div>
+            <div class="agent-details">
+              <p><i class="fas fa-home"></i>24 Properties</p>
+              <p><i class="fas fa-globe"></i>English, Arabic, Hindi, Bangla</p>
+              <p><i class="fas fa-star"></i>8 years experience</p>
+            </div>
+            <a class="view-profile" href="profile-delowar.html">View Profile</a>
+          </div>
+
+          <div class="agent-card">
+            <div class="agent-photo"><img src="pro2.png" alt="Aisha"></div>
+            <div class="agent-name">Zainab Mohammed</div>
+            <div class="agent-title">LUXURY SPECIALIST</div>
+            <div class="agent-details">
+              <p><i class="fas fa-home"></i>32 Properties</p>
+              <p><i class="fas fa-globe"></i>English, French</p>
+              <p><i class="fas fa-star"></i>6 years experience</p>
+            </div>
+            <a class="view-profile" href="profile-aisha.html">View Profile</a>
+          </div>
+
+          <div class="agent-card">
+            <div class="agent-photo"><img src="pro3.png" alt="Hamza"></div>
+            <div class="agent-name">Hamza Ali</div>
+            <div class="agent-title">LUXURY SPECIALIST</div>
+            <div class="agent-details">
+              <p><i class="fas fa-home"></i>28 Properties</p>
+              <p><i class="fas fa-globe"></i>English, Urdu</p>
+              <p><i class="fas fa-star"></i>5 years experience</p>
+            </div>
+            <a class="view-profile" href="profile-hamza.html">View Profile</a>
+          </div>
+
+          <div class="agent-card">
+            <div class="agent-photo"><img src="pro4.png" alt="Yousuf"></div>
+            <div class="agent-name">Yousuf Bin Ali</div>
+            <div class="agent-title">COMMERCIAL EXPERT</div>
+            <div class="agent-details">
+              <p><i class="fas fa-home"></i>19 Properties</p>
+              <p><i class="fas fa-globe"></i>English, Arabic</p>
+              <p><i class="fas fa-star"></i>7 years experience</p>
+            </div>
+            <a class="view-profile" href="profile-yousuf.html">View Profile</a>
+          </div>
+
+          <div class="agent-card">
+            <div class="agent-photo"><img src="pro5.png" alt="Yusuf"></div>
+            <div class="agent-name"> Zara Loren Diota</div>
+            <div class="agent-title">INTERNATIONAL AGENT</div>
+            <div class="agent-details">
+              <p><i class="fas fa-home"></i>27 Properties</p>
+              <p><i class="fas fa-globe"></i>English, Spanish</p>
+              <p><i class="fas fa-star"></i>10 years experience</p>
+            </div>
+            <a class="view-profile" href="profile-yusuf.html">View Profile</a>
+          </div>
+
+          <div class="agent-card">
+            <div class="agent-photo"><img src="pro6.png" alt="Fatima"></div>
+            <div class="agent-name">Fatima Ali</div>
+            <div class="agent-title">COMMERCIAL EXPERT</div>
+            <div class="agent-details">
+              <p><i class="fas fa-home"></i>19 Properties</p>
+              <p><i class="fas fa-globe"></i>English, Arabic</p>
+              <p><i class="fas fa-star"></i>7 years experience</p>
+            </div>
+            <a class="view-profile" href="profile-fatima.html">View Profile</a>
+          </div>
+
+          <div class="agent-card">
+            <div class="agent-photo"><img src="pro7.png" alt="Sam"></div>
+            <div class="agent-name">Samir Khan</div>
+            <div class="agent-title">CITY SPECIALIST</div>
+            <div class="agent-details">
+              <p><i class="fas fa-home"></i>15 Properties</p>
+              <p><i class="fas fa-globe"></i>English</p>
+              <p><i class="fas fa-star"></i>4 years experience</p>
+            </div>
+            <a class="view-profile" href="profile-samir.html">View Profile</a>
+          </div>
+
+          <div class="agent-card">
+            <div class="agent-photo"><img src="pro8.png" alt="Nadia"></div>
+            <div class="agent-name">Zainab Mohammed</div>
+            <div class="agent-title">RESIDENTIAL EXPERT</div>
+            <div class="agent-details">
+              <p><i class="fas fa-home"></i>21 Properties</p>
+              <p><i class="fas fa-globe"></i>English, Arabic</p>
+              <p><i class="fas fa-star"></i>9 years experience</p>
+            </div>
+            <a class="view-profile" href="profile-nadia.html">View Profile</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pagination" id="agentsPagination"></div>
+    </div>
+  </div>
  <!-- 8 Premium Agents ends --> 
 
 
 
  <!-- 9 Gratitude  &  testmonial Customer-->
+  <!-- 9 Gratitude  &  testmonial Customer-->
  <div class="support">
     <h1> 9 Customer Support & Testimonials</h1>
     <h4>What our customers say</h4>
@@ -1053,11 +1151,12 @@
     <div class="dots" id="dots"></div>
   </div>
  <!-- Support testimonial ends -->
+ <!-- Support testimonial ends -->
  
  
  
  <!-- 10 Browsing & UsersCounter starts-->
-<div class="counter-parent">
+<div>
     <h2> 10 Millions of suppliers your business needs</h2>
     <div class="counter-container">
         <div class="counter-box">
@@ -1086,7 +1185,7 @@
 	
 	
 
-<!-- 11 CEO Message container start -->
+<!-- CEO Message container -->
 
 <section class="ceo-message">
   <!-- Left Image -->
@@ -1107,11 +1206,11 @@
   <div class="ceo-image right"></div>
 </section>
 
-<!-- 11 Message from CEO ends-->
+
+<!-- Message from CEO ends-->
+
 	
-	
-	
-	<!-- footer section starts -->
+<!-- footer section starts -->
 <footer class="footer-container">
         <div class="footer-content">
             <div class="footer-section">
@@ -1119,9 +1218,9 @@
                 <div class="city-slider">
                     <div class="city-slides">
                         <div class="city-slide">
-                            <a href="#" class="city-link">Abu Dhabi</a>
+                            <a href="#" class="city-link">Dhabi</a>
                             <a href="#" class="city-link">Ajman</a>
-                            <a href="#" class="city-link">Dubai</a>
+                            <a href="#" class="city-link">Abu Dhabi</a>
                             <a href="#" class="city-link">Sharjah</a>
                         </div>
                         <div class="city-slide">
@@ -1196,13 +1295,10 @@
       <a href="https://www.pinterest.com" target="_blank" style="color:#E60023;"><i class="fab fa-pinterest"></i></a>
     </div>
 
-
-  </div>
-  
-  
-      <div class="footer-copyright">
+    <div class="footer-copyright">
       &copy; Copyright 2025 Galaxy IT Park. All rights reserved
     </div>
+  </div>
 </div>
 	 <!-- footer section ends -->  		
 </footer>  
@@ -1275,77 +1371,60 @@ searchInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') searchBt
 </script>
  <!-- header and search end--> 
  
+ 
 <!-- marquee Mobile Menu end-->  
 	
 	
 <!--  /* --- 3 All City Container start --- */--> 
 	<script>
-const track = document.getElementById('carouselTrack');
-const dotsContainer = document.getElementById('carouselDots');
-const prevBtn = document.getElementById('prevBtn');
-const nextBtn = document.getElementById('nextBtn');
-const slides = Array.from(track.children);
+    const slider = document.getElementById('citySlider');
+    const leftArrow = document.querySelector('.arrow-left');
+    const rightArrow = document.querySelector('.arrow-right');
 
-let index = 0;
-let slideWidth;
-let perView;
+    let currentIndex = 0;
 
-function updateView() {
-  const width = window.innerWidth;
-  if (width <= 600) perView = 1;
-  else if (width <= 992) perView = 2;
-  else perView = 4;
-  slideWidth = slides[0].getBoundingClientRect().width + 12;
-  updateDots();
-  moveToSlide(index);
-}
+    function getVisibleCards() {
+      const width = window.innerWidth;
+      if (width <= 412) return 1; // small mobile
+      if (width <= 1023) return 2; // tablet
+      return 4; // desktop
+    }
 
-function updateDots() {
-  dotsContainer.innerHTML = '';
-  const total = Math.ceil(slides.length / perView);
-  for (let i = 0; i < total; i++) {
-    const dot = document.createElement('div');
-    dot.className = 'dot' + (i === Math.floor(index / perView) ? ' active' : '');
-    dot.addEventListener('click', () => moveToSlide(i * perView));
-    dotsContainer.appendChild(dot);
-  }
-}
+    function updateSliderPosition() {
+      const cardWidth = slider.querySelector('.card').clientWidth + 10; // include gap
+      slider.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+    }
 
-function moveToSlide(newIndex) {
-  if (newIndex < 0) newIndex = 0;
-  if (newIndex > slides.length - perView) newIndex = slides.length - perView;
-  index = newIndex;
-  track.style.transform = `translateX(-${index * slideWidth}px)`;
-  updateDots();
-}
+    rightArrow.addEventListener('click', () => {
+      const visible = getVisibleCards();
+      const totalCards = slider.children.length;
+      if (currentIndex < totalCards - visible) {
+        currentIndex += visible === 2 ? 2 : 1; // slide by visible count
+      } else {
+        currentIndex = 0; // loop back
+      }
+      updateSliderPosition();
+    });
 
-prevBtn.addEventListener('click', () => moveToSlide(index - 1));
-nextBtn.addEventListener('click', () => moveToSlide(index + 1));
+    leftArrow.addEventListener('click', () => {
+      const visible = getVisibleCards();
+      const totalCards = slider.children.length;
+      if (currentIndex > 0) {
+        currentIndex -= visible === 2 ? 2 : 1;
+      } else {
+        currentIndex = totalCards - visible;
+      }
+      updateSliderPosition();
+    });
 
-window.addEventListener('resize', updateView);
-updateView();
-
-// Drag / Touch
-let startX = 0, dragging = false;
-
-track.addEventListener('pointerdown', e => {
-  dragging = true;
-  startX = e.clientX;
-  track.style.cursor = 'grabbing';
-});
-
-track.addEventListener('pointerup', e => {
-  if (!dragging) return;
-  const diff = e.clientX - startX;
-  if (diff > 50) moveToSlide(index - 1);
-  else if (diff < -50) moveToSlide(index + 1);
-  dragging = false;
-  track.style.cursor = 'grab';
-});
-
-track.addEventListener('pointerleave', () => dragging = false);
-</script>
+    window.addEventListener('resize', () => {
+      updateSliderPosition();
+    });
+  </script>
 	<!--  /* --- 3 All City Container ends--- */--> 
+	
+	
+	
 	
 	
 <!----7 Featured Real Estate Agenciesstarts ---->
@@ -1410,74 +1489,130 @@ window.addEventListener('resize', updateCarousel);
 
 
 <!---- /* 8 Premium Real Estate Agents starts */ ---->
-
 <script>
-const track = document.getElementById("agentsTrack");
-const next = document.getElementById("nextAgents");
-const prev = document.getElementById("prevAgents");
-const pagination = document.getElementById("agentsPagination");
-const cards = Array.from(track.children);
-let index = 0;
-let perView = getPerView();
+    (function () {
+      const track = document.getElementById('agentsTrack');
+      const prevBtn = document.querySelector('.prev');
+      const nextBtn = document.querySelector('.next');
+      const pagination = document.getElementById('agentsPagination');
 
-function getPerView() {
-  if (window.innerWidth <= 480) return 1;
-  if (window.innerWidth <= 992) return 2;
-  return 4;
-}
+      let cards = Array.from(track.querySelectorAll('.agent-card'));
+      let totalCards = cards.length;
+      let visibleCount = getVisibleCount();
+      let pageCount = Math.ceil(totalCards / visibleCount);
+      let currentPage = 0;
+      let autoTimer = null;
+      const AUTO_INTERVAL = 2000; // 2 seconds
 
-function setupDots() {
-  pagination.innerHTML = "";
-  const count = Math.ceil(cards.length / perView);
-  for (let i = 0; i < count; i++) {
-    const dot = document.createElement("div");
-    if (i === 0) dot.classList.add("active");
-    dot.addEventListener("click", () => goToSlide(i));
-    pagination.appendChild(dot);
-  }
-}
-function updateDots() {
-  [...pagination.children].forEach((dot, i) =>
-    dot.classList.toggle("active", i === index)
-  );
-}
-function goToSlide(i) {
-  index = i;
-  track.style.transform = `translateX(-${i * 100}%)`;
-  updateDots();
-}
-next.addEventListener("click", () => {
-  const total = Math.ceil(cards.length / perView);
-  index = (index + 1) % total;
-  goToSlide(index);
-});
-prev.addEventListener("click", () => {
-  const total = Math.ceil(cards.length / perView);
-  index = (index - 1 + total) % total;
-  goToSlide(index);
-});
+      function getVisibleCount() {
+        return window.innerWidth < 768 ? 2 : 4; // mobile 2, else 4
+      }
 
-// Touch + mouse drag
-let startX = 0;
-track.addEventListener("pointerdown", e => (startX = e.clientX));
-track.addEventListener("pointerup", e => {
-  const diff = e.clientX - startX;
-  if (diff < -50) next.click();
-  else if (diff > 50) prev.click();
-});
+      function buildPagination() {
+        pagination.innerHTML = '';
+        pageCount = Math.max(1, Math.ceil(totalCards / visibleCount));
+        for (let i = 0; i < pageCount; i++) {
+          const dot = document.createElement('div');
+          dot.className = 'pagination-dot' + (i === 0 ? ' active' : '');
+          dot.dataset.index = i;
+          dot.addEventListener('click', () => {
+            currentPage = i;
+            moveToPage(currentPage);
+            resetAuto();
+          });
+          pagination.appendChild(dot);
+        }
+      }
 
-// Auto slide
-setInterval(() => next.click(), 5000);
+      function computeCardSpace() {
+        // need card width + gap between cards
+        cards = Array.from(track.querySelectorAll('.agent-card'));
+        if (cards.length === 0) return { cardWidth: 0, gap: 0, cardSpace: 0 };
 
-// Resize handling
-window.addEventListener("resize", () => {
-  perView = getPerView();
-  setupDots();
-  goToSlide(0);
-});
+        const rect0 = cards[0].getBoundingClientRect();
+        const cardWidth = rect0.width;
+        // estimate gap using second card if present
+        let gap = 0;
+        if (cards[1]) {
+          const rect1 = cards[1].getBoundingClientRect();
+          gap = rect1.left - rect0.left - cardWidth;
+          if (isNaN(gap) || gap < 0) gap = 0;
+        } else {
+          // fallback to computed margin
+          const style = getComputedStyle(cards[0]);
+          gap = (parseFloat(style.marginRight) || 0) + (parseFloat(style.marginLeft) || 0);
+        }
+        const cardSpace = cardWidth + gap;
+        return { cardWidth, gap, cardSpace };
+      }
 
-setupDots();
-</script>
+      function moveToPage(pageIndex, animate = true) {
+        const { cardSpace } = computeCardSpace();
+        const maxTranslate = Math.max(0, (totalCards - visibleCount) * cardSpace);
+        let target = pageIndex * visibleCount * cardSpace;
+        if (target > maxTranslate) target = maxTranslate;
+        if (!animate) track.style.transition = 'none';
+        else track.style.transition = 'transform 0.6s ease-in-out';
+        track.style.transform = `translateX(-${target}px)`;
+        // update dots
+        Array.from(pagination.children).forEach((d, i) => d.classList.toggle('active', i === pageIndex));
+      }
+
+      function nextPage() {
+        currentPage = (currentPage + 1) % pageCount;
+        moveToPage(currentPage);
+      }
+
+      function prevPage() {
+        currentPage = (currentPage - 1 + pageCount) % pageCount;
+        moveToPage(currentPage);
+      }
+
+      function resetAuto() {
+        if (autoTimer) clearInterval(autoTimer);
+        autoTimer = setInterval(nextPage, AUTO_INTERVAL);
+      }
+
+      // initialize
+      function init() {
+        totalCards = track.querySelectorAll('.agent-card').length;
+        visibleCount = getVisibleCount();
+        pageCount = Math.max(1, Math.ceil(totalCards / visibleCount));
+        currentPage = 0;
+        buildPagination();
+        moveToPage(0, false);
+        resetAuto();
+      }
+
+      // events
+      nextBtn.addEventListener('click', () => { nextPage(); resetAuto(); });
+      prevBtn.addEventListener('click', () => { prevPage(); resetAuto(); });
+
+      // pause on hover
+      const container = track.parentElement;
+      container.addEventListener('mouseenter', () => { if (autoTimer) { clearInterval(autoTimer); autoTimer = null; }});
+      container.addEventListener('mouseleave', () => { if (!autoTimer) resetAuto(); });
+
+      // handle resizing -> rebuild if visibleCount changes
+      let resizeTimeout = null;
+      window.addEventListener('resize', () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+          const newVisible = getVisibleCount();
+          if (newVisible !== visibleCount) {
+            visibleCount = newVisible;
+            init();
+          } else {
+            // still recalc transform to adapt to widths
+            moveToPage(currentPage, false);
+          }
+        }, 120);
+      });
+
+      // start
+      init();
+    })();
+  </script>
 <!---- /* 8 Premium Real Estate Agents ends */ ---->
 
 
@@ -1490,8 +1625,6 @@ setupDots();
 
 
 
-
-  
 <!---- /* 9 Gratitude & Testimonials starts */ ---->
 <script>
     const slider = document.getElementById("supportSlider");
@@ -1584,10 +1717,26 @@ counters.forEach(counter => {
 });
  <!---- /* 10 Millions of offerings suppliers your business needs ends */ ---->
    </script>
-		
 	
 	
-	<!--  /* --- Message ceo start--- */--> 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+<!--  /* --- Message ceo start--- */--> 	
 <script>
   const ceoObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -1602,17 +1751,5 @@ counters.forEach(counter => {
 
 <!--  /* --- Message ceo end--- */--> 
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 </body>
-
 </html>
